@@ -1,0 +1,16 @@
+@import "tailwindcss";
+:root {
+  --text-color: #101828;
+  --text-color-secondary: #364153;
+  --orange-text: #ff6900;
+  --nav-links-text: #4a5565;
+  --gray-bg: #f3f4f6;
+  --dark-btn-bg: #1e2939;
+}
+
+/* Target the currently selected nav bar link*/
+.active {
+  color: white;
+  border-radius: 0.625rem;
+  background-color: var(--orange-text);
+}
