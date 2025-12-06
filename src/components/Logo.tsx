@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 function Logo() {
   return (
     <Link
-      to="/"
+      to="/home"
       className="text-2xl text-(--text-color) space-x-2 w-fit md:space-x-1"
     >
       <span className="md:hidden lg:inline">Muntadher</span>

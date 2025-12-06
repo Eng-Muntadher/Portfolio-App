@@ -14,3 +14,23 @@
   border-radius: 0.625rem;
   background-color: var(--orange-text);
 }
+
+/* Apply to a specific container */
+.scrollbar-custom {
+  scrollbar-width: thin; /* Firefox */
+  scrollbar-color: #ff6900 transparent; /* Firefox */
+}
+
+/* Chrome, Edge, Safari */
+.scrollbar-custom::-webkit-scrollbar {
+  width: 6px; /* thickness */
+}
+
+.scrollbar-custom::-webkit-scrollbar-track {
+  background: transparent; /* track color */
+}
+
+.scrollbar-custom::-webkit-scrollbar-thumb {
+  background-color: #ff6900; /* thumb color */
+  border-radius: 3px; /* rounded thumb */
+}
