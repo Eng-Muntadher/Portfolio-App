@@ -1,9 +1,14 @@
+import { Link } from "react-router-dom";
+
 interface ButtonProps {
-  variation: "orange" | "light" | "dark";
-  onClick: React.MouseEventHandler<HTMLButtonElement>;
+  variation: "orange" | "light" | "dark" | "gray";
+  onClick?: React.MouseEventHandler<HTMLButtonElement>;
   addedClasses?: string;
   children: React.ReactNode;
   type?: "button" | "submit" | "reset";
+  isLink?: boolean;
+  to?: string;
+  disabled?: boolean;
 }
 
 function Button({
@@ -11,20 +16,37 @@ function Button({
   onClick,
   addedClasses = "",
   children,
+  isLink = false,
+  to = "/",
   type = "button",
+  disabled = false,
 }: ButtonProps) {
-  const classes = "px-6 py-3 flex items-center gap-2 rounded-[0.625rem] ";
+  const styles = "flex items-center gap-2 rounded-[0.625rem]";
 
   const variations = {
-    orange: "text-white bg-(--orange-text) shadow-lg ",
-    light: "text-(--orange-text) border border-(--orange-text) ",
-    dark: "text-white bg-(--dark-btn-bg) ",
+    orange: "text-white bg-(--orange-text) shadow-lg",
+    light: "text-(--orange-text) border border-(--orange-text)",
+    dark: "text-white bg-(--dark-btn-bg)",
+    gray: "text-(--text-color-secondary) border border-[#E5E7EB] bg-[#f9fafb]",
   };
+
+  if (isLink) {
+    return (
+      <Link
+        to={to}
+        className={`${styles} ${variations[variation]} ${addedClasses}`}
+      >
+        {children}
+      </Link>
+    );
+  }
+
   return (
     <button
       type={type}
       onClick={onClick}
-      className={classes + variations[variation] + { addedClasses }}
+      disabled={disabled}
+      className={`${styles} ${variations[variation]} ${addedClasses}`}
     >
       {children}
     </button>

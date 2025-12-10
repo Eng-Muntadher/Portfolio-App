@@ -34,16 +34,28 @@ function HeroSection() {
         </p>
 
         <div className="flex gap-4 flex-wrap">
-          <Button variation="orange" onClick={() => navigate("/projects")}>
+          <Button
+            variation="orange"
+            onClick={() => navigate("/projects")}
+            addedClasses="px-6 py-3"
+          >
             <ArrowRight aria-hidden="true" />
             View My Work
           </Button>
 
-          <Button variation="light" onClick={() => navigate("/projects")}>
+          <Button
+            variation="light"
+            onClick={() => navigate("/projects")}
+            addedClasses="px-6 py-3"
+          >
             Contact Me
           </Button>
 
-          <Button variation="dark" onClick={() => console.log("Do later...")}>
+          <Button
+            variation="dark"
+            onClick={() => console.log("Do later...")}
+            addedClasses="px-6 py-3"
+          >
             <Download aria-hidden="true" />
             Download CV
           </Button>

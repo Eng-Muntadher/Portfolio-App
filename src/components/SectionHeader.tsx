@@ -3,6 +3,7 @@ interface SectionTitleProps {
   text: string;
   highlight: string;
   addedClasses?: string;
+  // subHeaderText
 }
 
 export default function SectionHeader({
@@ -22,7 +23,7 @@ export default function SectionHeader({
 
       <span
         aria-hidden="true"
-        className="absolute bg-(--orange-text) w-20 h-1 -bottom-4 left-1/2 -translate-x-1/2"
+        className="absolute bg-(--orange-text) w-20 h-1 -bottom-5 left-1/2 -translate-x-1/2"
       ></span>
     </Tag>
   );
