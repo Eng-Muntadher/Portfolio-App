@@ -6,6 +6,8 @@
   --nav-links-text: #4a5565;
   --gray-bg: #f3f4f6;
   --dark-btn-bg: #1e2939;
+  --contact-card-bg: rgba(255, 105, 0, 0.2);
+  --contact-card-text: rgba(255, 105, 0, 0.2);
 }
 
 /* Target the currently selected nav bar link*/

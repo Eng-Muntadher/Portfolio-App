@@ -34,7 +34,7 @@ function Button({
     return (
       <Link
         to={to}
-        className={`${styles} ${variations[variation]} ${addedClasses}`}
+        className={`${styles} ${variations[variation]} ${addedClasses} disabled:opacity-65`}
       >
         {children}
       </Link>
@@ -46,7 +46,7 @@ function Button({
       type={type}
       onClick={onClick}
       disabled={disabled}
-      className={`${styles} ${variations[variation]} ${addedClasses}`}
+      className={`${styles} ${variations[variation]} ${addedClasses} disabled:opacity-65`}
     >
       {children}
     </button>

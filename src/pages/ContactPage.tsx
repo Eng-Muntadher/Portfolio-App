@@ -1,5 +1,26 @@
+import ContactForm from "../components/ContactForm";
+import ContactInfo from "../components/ContactInfo";
+import SectionHeader from "../components/SectionHeader";
+
 function ContactPage() {
-  return <div>Contact</div>;
+  return (
+    <div className="px-20 max-xl:px-8">
+      <SectionHeader
+        text="Get In"
+        highlight="Touch"
+        addedClasses="text-6xl mb-10 max-lg:text-5xl max-md:text-4xl"
+      />
+
+      <p className="text-(--nav-links-text) text-xl text-center mb-16">
+        Feel free to reach out for opportunities or just to say hello!
+      </p>
+
+      <div className="grid grid-cols-2 gap-12 max-lg:grid-cols-1">
+        <ContactInfo />
+        <ContactForm />
+      </div>
+    </div>
+  );
 }
 
 export default ContactPage;

@@ -59,9 +59,13 @@ function ProjectCard({
         </div>
 
         <div className="p-6">
-          <h2 className="text-xl text-(--text-color) mb-3">{title}</h2>
+          <h2 className="text-xl text-start text-(--text-color) mb-3">
+            {title}
+          </h2>
 
-          <p className="text-sm text-(--nav-links-text) mb-5">{description}</p>
+          <p className="text-sm text-start text-(--nav-links-text) mb-5">
+            {description}
+          </p>
 
           {/* Technologies used in this project */}
           <ul className="flex gap-2 flex-wrap mb-4">

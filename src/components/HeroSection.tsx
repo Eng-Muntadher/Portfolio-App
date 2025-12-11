@@ -14,11 +14,11 @@ function HeroSection() {
       className="flex items-center justify-between px-20 max-xl:px-8 mb-40 max-lg:flex-col"
     >
       <div className="max-lg:mb-12 max-lg:self-start">
-        <span>Hello, I'm</span>
+        <span className="block max-lg:mb-4">Hello, I'm</span>
 
         <h1
           id="my-name"
-          className="text-[5rem] max-lg:text-7xl max-md:text-5xl text-(--text-color) mt-4 mb-8"
+          className="text-[5rem] max-lg:text-7xl max-md:text-5xl text-(--text-color) mb-8"
         >
           <span>Muntadher </span>
           <span className="text-(--orange-text)">Ahmed</span>

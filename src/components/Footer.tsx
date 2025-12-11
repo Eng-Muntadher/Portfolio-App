@@ -110,7 +110,7 @@ function Footer() {
       <hr className="border-t border-gray-200 my-8" />
 
       <p className="text-(--nav-links-text) text-sm text-center mb-2">
-        Made by Muntadher Ahmed
+        Built by Muntadher Ahmed
       </p>
 
       <p className="text-[#6A7282] text-sm text-center">
