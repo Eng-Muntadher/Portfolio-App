@@ -82,9 +82,11 @@ npm start        # or yarn start / pnpm start
 
 ```
 src/
-├── components/      # Reusable UI components
-├── pages/           # Page components (Home, About, Projects, etc.)
 ├── assets/          # Images, icons, and static files
+├── components/      # Reusable UI components
+├── data/            # Data for projects, skills and 'about' info
+├── pages/           # Page components (Home, About, Projects, etc.)
+├── types/           # Types used to descripe the shape of data accross the app
 ```
 
 ---

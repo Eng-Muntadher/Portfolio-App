@@ -1,8 +1,14 @@
-import ProjectActionButtons from "../components/ProjectActionButtons";
+import { useEffect } from "react";
+import ProjectsFilterButtons from "../components/ProjectsFilterButtons";
 import ProjectCardsList from "../components/ProjectCardsList";
 import SectionHeader from "../components/SectionHeader";
 
 function ProjectsPage() {
+  // This use effect resets the scroll of the page to the top
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
+
   return (
     <div className="px-20 max-xl:px-8">
       <SectionHeader
@@ -15,7 +21,7 @@ function ProjectsPage() {
         A collection of my recent work and personal projects
       </p>
 
-      <ProjectActionButtons />
+      <ProjectsFilterButtons />
 
       <ProjectCardsList />
     </div>

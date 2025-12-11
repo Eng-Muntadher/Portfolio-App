@@ -1,27 +1,16 @@
 import { Circle, Stars } from "lucide-react";
+import { coreStrengths, currentlyExploring } from "../data/skills";
 import SectionHeader from "../components/SectionHeader";
 import SkillCardsContainer from "../components/SkillCardsContainer";
 import TechnicalNotes from "../components/TechnicalNotes";
-
-const coreStrengths = [
-  "Building responsive, accessible web applications",
-  "Writing clean, maintainable, and scalable code",
-  "Implementing modern design systems",
-  "Optimizing performance and user experience",
-  "Collaborating with cross-functional teams",
-  "Quick learner with strong problem-solving skills",
-];
-
-const currentlyExploring = [
-  "Advanced React patterns and architecture",
-  "Server-side rendering with Next.js",
-  "Advanced TypeScript techniques",
-  "Building production-ready UI components with shadcn/ui",
-  "Advanced Git workflows and version control strategies",
-  "Fundamentals of automated testing",
-];
+import { useEffect } from "react";
 
 function SkillsPage() {
+  // This use effect resets the scroll of the page to the top
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
+
   return (
     <div className="px-20 max-xl:px-8">
       <SectionHeader

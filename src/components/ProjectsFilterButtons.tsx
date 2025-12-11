@@ -1,7 +1,7 @@
 import { useLocation, useNavigate } from "react-router-dom";
 import Button from "./Button";
 
-function ProjectActionButtons() {
+function ProjectsFilterButtons() {
   const navigate = useNavigate();
 
   const { search } = useLocation();
@@ -43,4 +43,4 @@ function ProjectActionButtons() {
   );
 }
 
-export default ProjectActionButtons;
+export default ProjectsFilterButtons;

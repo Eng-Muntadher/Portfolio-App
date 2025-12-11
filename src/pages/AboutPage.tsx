@@ -1,9 +1,15 @@
+import { useEffect } from "react";
 import AboutMeCardsList from "../components/AboutMeCardsList";
 import AboutMeFinalArticle from "../components/AboutMeFinalArticle";
 import MyStoryArticle from "../components/MyStoryArticle";
 import SectionHeader from "../components/SectionHeader";
 
 function AboutPage() {
+  // This use effect resets the scroll of the page to the top
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
+
   return (
     <div className="px-20 max-xl:px-8">
       <SectionHeader

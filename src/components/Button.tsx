@@ -1,7 +1,7 @@
 import { Link } from "react-router-dom";
 
 interface ButtonProps {
-  variation: "orange" | "light" | "dark" | "gray";
+  variation: "orange" | "light" | "dark" | "gray" | "red";
   onClick?: React.MouseEventHandler<HTMLButtonElement>;
   addedClasses?: string;
   children: React.ReactNode;
@@ -25,9 +25,10 @@ function Button({
 
   const variations = {
     orange: "text-white bg-(--orange-text) shadow-lg",
-    light: "text-(--orange-text) border border-(--orange-text)",
+    light: "text-(--orange-text) border-2 border-(--orange-text)",
     dark: "text-white bg-(--dark-btn-bg)",
     gray: "text-(--text-color-secondary) border border-[#E5E7EB] bg-[#f9fafb]",
+    red: "text-white bg-gradient-to-b from-red-600 to-red-500",
   };
 
   if (isLink) {

@@ -45,7 +45,7 @@ function HeroSection() {
 
           <Button
             variation="light"
-            onClick={() => navigate("/projects")}
+            onClick={() => navigate("/contact")}
             addedClasses="px-6 py-3"
           >
             Contact Me

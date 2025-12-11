@@ -39,7 +39,7 @@ function ProjectCard({
   return (
     <li>
       <button
-        onClick={() => navigate(`/projects?id=${id}`)}
+        onClick={() => navigate(`/project-details/${id}`)}
         className="rounded-2xl border border-[#E5E7EB] bg-white shadow-xl"
       >
         <div className="relative">

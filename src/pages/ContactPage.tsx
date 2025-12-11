@@ -1,8 +1,14 @@
+import { useEffect } from "react";
 import ContactForm from "../components/ContactForm";
 import ContactInfo from "../components/ContactInfo";
 import SectionHeader from "../components/SectionHeader";
 
 function ContactPage() {
+  // This use effect resets the scroll of the page to the top
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
+
   return (
     <div className="px-20 max-xl:px-8">
       <SectionHeader
