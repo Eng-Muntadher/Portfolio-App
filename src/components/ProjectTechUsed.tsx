@@ -4,7 +4,7 @@ function ProjectTechUsed({ technologiesUsed }: { technologiesUsed: string[] }) {
   return (
     <section
       aria-labelledby="tech-stack"
-      className="rounded-xl border border-gray-200 bg-white shadow-xl p-6 max-w-[430px] max-lg:max-w-full"
+      className="rounded-xl border border-(--border-color) bg-(--custom-bg) shadow-xl p-6 max-w-[430px] max-lg:max-w-full"
     >
       <h2 id="tech-stack" className="text-2xl text-(--orange-text) mb-4">
         Tech Stack

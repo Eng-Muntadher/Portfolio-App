@@ -2,7 +2,7 @@ function AboutMeFinalArticle() {
   return (
     <section
       aria-labelledby="heading"
-      className="px-6 flex flex-col items-center pt-10 pb-6 text-center rounded-[0.875rem] border border-[#E5E7EB] bg-white shadow-[0_10px_15px_-3px_rgba(0,0,0,0.10),0_4px_6px_-4px_rgba(0,0,0,0.10)]"
+      className="px-6 flex flex-col items-center pt-10 pb-6 text-center rounded-[0.875rem] border border-(--border-color) bg-(--custom-bg-2) shadow-lg"
     >
       <h3 id="heading" className="text-3xl text-(--text-color) mb-4">
         <span className="text-(--orange-text)">Always</span> Learning & Growing

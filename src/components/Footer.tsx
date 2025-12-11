@@ -40,14 +40,14 @@ const quickLinks = [
 ];
 
 const linksClasses =
-  "rounded-[0.625rem] bg-white p-2 text-[var(--nav-links-text)] flex items-center justify-center";
+  "rounded-[0.625rem] bg-(--gray-bg) p-2 text-[var(--nav-links-text)] flex items-center justify-center";
 
 const currentYear = new Date().getFullYear();
 
 function Footer() {
   return (
     <footer
-      className="px-20 py-12 mt-20 bg-[#F9FAFB] border border-[#E5E7EB]"
+      className="px-20 py-12 mt-20 bg-(--custom-bg) border-t border-(--border-color)"
       role="contentinfo"
     >
       <div className="grid grid-cols-3 gap-8 max-[860px]:grid-cols-1">
@@ -57,7 +57,7 @@ function Footer() {
             <span className="text-(--orange-text)">Ahmed</span>
           </h3>
 
-          <p className="text-(--nav-links-text) text-sm max-w-85 max-[860px]:text-center">
+          <p className="text-(--gray-text) text-sm max-w-85 max-[860px]:text-center">
             Front-End Developer passionate about creating beautiful and
             functional web applications.
           </p>
@@ -73,10 +73,14 @@ function Footer() {
             {quickLinks.map((column, colIdx) => (
               <div
                 key={colIdx}
-                className="flex flex-col items-center gap-2 text-sm text-(--nav-links-text) max-[430px]:mb-2"
+                className="flex flex-col items-center gap-2 text-sm text-(--gray-text) max-[430px]:mb-2"
               >
                 {column.map((link) => (
-                  <Link key={link.to} to={link.to}>
+                  <Link
+                    key={link.to}
+                    to={link.to}
+                    className="hover:text-(--orange-text)"
+                  >
                     {link.label}
                   </Link>
                 ))}
@@ -107,9 +111,9 @@ function Footer() {
         </div>
       </div>
 
-      <hr className="border-t border-gray-200 my-8" />
+      <hr className="border-t border-(--border-color) my-8" />
 
-      <p className="text-(--nav-links-text) text-sm text-center mb-2">
+      <p className="text-(--gray-text) text-sm text-center mb-2">
         Built by Muntadher Ahmed
       </p>
 

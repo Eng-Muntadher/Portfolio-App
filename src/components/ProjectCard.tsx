@@ -9,9 +9,9 @@ interface ProjectCardProps {
   description: string;
   technologiesUsed: string[];
   imageUrl: string;
-  liveLink: string;
-  gitHubLink: string;
-  youtubeLink: string;
+  liveLink: string | undefined;
+  gitHubLink: string | undefined;
+  youtubeLink: string | undefined;
   isFinished: boolean;
 }
 
@@ -40,7 +40,7 @@ function ProjectCard({
     <li>
       <button
         onClick={() => navigate(`/project-details/${id}`)}
-        className="rounded-2xl border border-[#E5E7EB] bg-white shadow-xl"
+        className="rounded-2xl border border-(--border-color) bg-(--custom-bg-2) shadow-xl"
       >
         <div className="relative">
           <img
@@ -63,7 +63,7 @@ function ProjectCard({
             {title}
           </h2>
 
-          <p className="text-sm text-start text-(--nav-links-text) mb-5">
+          <p className="text-sm text-start text-(--gray-text) mb-5">
             {description}
           </p>
 
@@ -79,7 +79,7 @@ function ProjectCard({
               />
             ))}
 
-            <li className="flex items-center justify-center text-xs px-3 py-1 bg-[#F3F4F6] rounded-full text-(--nav-links-text)">
+            <li className="flex items-center justify-center text-xs px-3 py-1 bg-(--gray-bg) rounded-full text-(--gray-text)">
               {/* Show how many other technologies are used other than what is shown */}
               +{notDisplayedTechnologies}
             </li>
@@ -96,7 +96,9 @@ function ProjectCard({
                   variation={
                     btn.variation as "orange" | "gray" | "light" | "dark"
                   }
-                  addedClasses="justify-center text-sm px-3 py-2 grow"
+                  addedClasses={`justify-center text-sm px-3 py-2 grow ${
+                    btn.variation === "gray" ? "border-2" : ""
+                  }`}
                 >
                   <btn.icon size={16} />
                   {btn.text}
@@ -104,7 +106,7 @@ function ProjectCard({
               ))}
             </div>
           ) : (
-            <div className="justify-center text-sm px-3 py-2 w-full opacity-70 flex items-center gap-2 rounded-[0.625rem] text-(--text-color-secondary) border border-[#E5E7EB] bg-[#f9fafb]">
+            <div className="justify-center text-sm px-3 py-2 w-full opacity-70 flex items-center gap-2 rounded-[0.625rem] text-(--text-color-secondary) border-(--border-color) bg-(--custom-bg-2) border-3">
               <Clock size={16} />
               Comming Soon
             </div>

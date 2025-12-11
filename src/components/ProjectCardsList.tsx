@@ -18,6 +18,10 @@ function ProjectCardsList() {
     filteredProjects = projects.filter((project) =>
       project.technologiesUsed.includes("Next.js")
     );
+  } else if (state === "javascript") {
+    filteredProjects = projects.filter((project) =>
+      project.technologiesUsed.includes("JavaScript")
+    );
   }
 
   return (

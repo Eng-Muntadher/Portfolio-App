@@ -18,7 +18,7 @@ function AboutPage() {
         addedClasses="text-6xl mb-10 max-lg:text-5xl max-md:text-4xl"
       />
 
-      <p className="text-(--nav-links-text) text-xl text-center mb-16">
+      <p className="text-(--gray-text) text-xl text-center mb-16">
         Learn more about my journey and what drives me
       </p>
 

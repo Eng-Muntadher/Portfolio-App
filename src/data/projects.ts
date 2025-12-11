@@ -48,8 +48,7 @@ export const projects: Project[] = [
     description:
       "Lorem ipsum dolor sit amet consectetur adipisicing elit. Sed dignissimos odit vitae id commodi totam perferendis dolore explicabo tempore minus iste placeat",
     technologiesUsed: [
-      "React",
-      "TypeScript",
+      "JavaScript",
       "Recharts",
       "Lucid Icons",
       "React Query",

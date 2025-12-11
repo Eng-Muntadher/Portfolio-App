@@ -17,7 +17,7 @@ function SkillCategoryCard({
   skills,
 }: SkillCategoryCardProps) {
   return (
-    <li className="p-6 rounded-xl border border-gray-200 bg-white shadow-lg min-h-[250px]">
+    <li className="p-6 rounded-xl border border-(--border-color) bg-(--custom-bg-2) shadow-lg min-h-[250px]">
       <div className="flex gap-4 items-center mb-6">
         <span
           style={{

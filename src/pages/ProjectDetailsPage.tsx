@@ -17,9 +17,6 @@ import ProjectKeyFeatures from "../components/ProjectKeyFeatures";
 import ProjectChallengesCard from "../components/ProjectChallengesCard";
 import Breadcrumb from "../components/Breadcrumb";
 
-// @ts-ignore
-import myImage from "../assets/myImage.JPG";
-
 function ProjectDetailsPage() {
   const { id } = useParams<{ id: string }>();
 

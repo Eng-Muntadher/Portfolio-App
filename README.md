@@ -85,6 +85,7 @@ src/
 ├── assets/          # Images, icons, and static files
 ├── components/      # Reusable UI components
 ├── data/            # Data for projects, skills and 'about' info
+├── hooks/           # Custom hooks used accross the app
 ├── pages/           # Page components (Home, About, Projects, etc.)
 ├── types/           # Types used to descripe the shape of data accross the app
 ```

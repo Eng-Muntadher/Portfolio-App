@@ -50,7 +50,7 @@ function ContactForm() {
   return (
     <form
       onSubmit={handleSubmit}
-      className="space-y-6 p-6 rounded-xl border border-gray-200 bg-white shadow-lg h-fit"
+      className="space-y-6 p-6 rounded-xl border border-(--border-color) bg-(--custom-bg) shadow-lg h-fit"
     >
       <h2 className="text-3xl text-(--text-color) mb-6">
         <span>Send a </span>

@@ -14,7 +14,9 @@ function HeroSection() {
       className="flex items-center justify-between px-20 max-xl:px-8 mb-40 max-lg:flex-col"
     >
       <div className="max-lg:mb-12 max-lg:self-start">
-        <span className="block max-lg:mb-4">Hello, I'm</span>
+        <span className="block text-lg text-(--gray-text) max-lg:mb-4">
+          Hello, I'm
+        </span>
 
         <h1
           id="my-name"

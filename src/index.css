@@ -1,13 +1,47 @@
 @import "tailwindcss";
 :root {
   --text-color: #101828;
+  --text-color-2: #fff;
   --text-color-secondary: #364153;
   --orange-text: #ff6900;
   --nav-links-text: #4a5565;
+  --gray-text: #4a5565;
   --gray-bg: #f3f4f6;
   --dark-btn-bg: #1e2939;
   --contact-card-bg: rgba(255, 105, 0, 0.2);
   --contact-card-text: rgba(255, 105, 0, 0.2);
+  --border-color: #e5e7eb;
+  --custom-bg: #f9fafb;
+  --skill-bg: #f9fafb;
+  --skill-text: #1e2939;
+  --custom-bg-2: #fff;
+  --project-used-tech-bg: #fff7ed;
+  --project-used-tech-border: #ffd6a7;
+  --project-used-tech-text: #f54900;
+  --input-border: #d1d5dc;
+}
+
+:root.dark {
+  background-color: oklch(0.13 0.03 261.7);
+  --text-color: #fff;
+  --text-color-2: #000;
+  --text-color-secondary: #d1d5dc;
+  --orange-text: #ff6900;
+  --nav-links-text: #fff;
+  --gray-text: oklch(0.707 0.022 261.325);
+  --gray-bg: oklch(0.28 0.03 257.69);
+  --dark-btn-bg: #1e2939;
+  --contact-card-bg: rgba(255, 105, 0, 0.2);
+  --contact-card-text: rgba(255, 105, 0, 0.2);
+  --border-color: oklch(0.28 0.03 257.69);
+  --custom-bg: oklch(0.21 0.03 263.45);
+  --custom-bg-2: oklch(0.21 0.03 263.45);
+  --skill-bg: #1e2939;
+  --skill-text: #d1d5dc;
+  --project-used-tech-bg: #1e2939;
+  --project-used-tech-border: #364153;
+  --project-used-tech-text: oklch(70.5% 0.213 47.604);
+  --input-border: #364153;
 }
 
 /* Target the currently selected nav bar link*/

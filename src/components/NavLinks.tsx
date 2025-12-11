@@ -1,6 +1,6 @@
 import { NavLink } from "react-router-dom";
 
-const links = ["home", "about", "skills", "projects", "experience", "contact"];
+const links = ["home", "about", "skills", "projects", "contact"];
 const linkClasses =
   "px-4 py-2 text-(--nav-links-text) hover:text-(--orange-text) focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-(--orange-text)";
 

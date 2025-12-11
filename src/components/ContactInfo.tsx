@@ -34,7 +34,7 @@ function ContactInfo() {
     <div>
       <section
         aria-labelledby="contact-info"
-        className="space-y-6 p-6 rounded-xl border border-gray-200 bg-white shadow-lg h-fit mb-8"
+        className="space-y-6 p-6 rounded-xl border border-(--border-color) bg-(--custom-bg-2) shadow-lg h-fit mb-8"
       >
         <h2 id="contact-info" className="text-3xl text-(--text-color)">
           <span>Let's </span>
@@ -61,7 +61,7 @@ function ContactInfo() {
 
       <section
         aria-labelledby="contact-links"
-        className="p-6 rounded-xl border border-gray-200 bg-white shadow-lg"
+        className="p-6 rounded-xl border border-(--border-color) bg-(--custom-bg) shadow-lg"
       >
         <h2 id="contact-links" className="text-xl text-(--text-color) mb-6">
           <span>Find me on </span>
@@ -71,7 +71,7 @@ function ContactInfo() {
         <ul className="flex gap-4">
           {links.map((link) => (
             <li
-              className="rounded-xl border border-gray-200 shadow-lg p-4"
+              className="text-(--text-color) bg-(--skill-bg) rounded-xl border border-(--border-color) shadow-lg p-4"
               key={link.url}
             >
               <a

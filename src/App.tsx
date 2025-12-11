@@ -9,7 +9,6 @@ import Home from "./pages/HomePage";
 import AboutPage from "./pages/AboutPage";
 import SkillsPage from "./pages/SkillsPage";
 import ProjectsPage from "./pages/ProjectsPage";
-import ExperiencePage from "./pages/ExperiencePage";
 import ContactPage from "./pages/ContactPage";
 import ProjectDetailsPage from "./pages/ProjectDetailsPage";
 import { Toaster } from "react-hot-toast";
@@ -38,10 +37,6 @@ const router = createBrowserRouter([
       {
         path: "/projects",
         element: <ProjectsPage />,
-      },
-      {
-        path: "/experience",
-        element: <ExperiencePage />,
       },
       {
         path: "/contact",

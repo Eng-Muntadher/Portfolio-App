@@ -2,7 +2,7 @@ function MyStoryArticle() {
   const paragraphsClasses = "text-(--text-color-secondary) text-lg mb-4";
 
   return (
-    <article className="scrollbar-custom rounded-[0.875rem] border border-[#E5E7EB] p-6 bg-white shadow-[0_10px_15px_-3px_rgba(0,0,0,0.10),0_4px_6px_-4px_rgba(0,0,0,0.10)] lg:max-h-[470px] overflow-auto">
+    <article className="scrollbar-custom rounded-[0.875rem] border border-(--border-color) p-6 bg-(--custom-bg-2) shadow-lg lg:max-h-[470px] overflow-auto">
       <h2 className="text-3xl text-(--orange-text) mb-6">My Story</h2>
 
       <p className={paragraphsClasses}>

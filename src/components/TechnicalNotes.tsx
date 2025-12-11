@@ -24,7 +24,7 @@ function TechnicalNotes({
   return (
     <section
       aria-labelledby={headingId}
-      className="p-6 rounded-[0.875rem] border border-[#E5E7EB] bg-white shadow-xl"
+      className="p-6 rounded-[0.875rem] border border-(--border-color) bg-(--custom-bg-2) shadow-xl"
     >
       <h3
         id={headingId}

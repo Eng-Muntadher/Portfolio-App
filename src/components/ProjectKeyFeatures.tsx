@@ -8,7 +8,7 @@ function ProjectKeyFeatures({ left, right }: ProjectKeyFeaturesProps) {
   return (
     <section
       aria-labelledby="key-features"
-      className="rounded-xl border border-gray-200 bg-white shadow-xl p-6  mb-8"
+      className="rounded-xl border border-(--border-color) bg-(--custom-bg) shadow-xl p-6  mb-8"
     >
       <h2
         id="key-features"

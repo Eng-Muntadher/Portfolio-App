@@ -1,13 +1,25 @@
-import { Menu, Moon } from "lucide-react";
+import { Menu, Moon, Sun } from "lucide-react";
+import { useDarkMode } from "../hooks/useDarkMode";
 
-const buttonClasses = "p-2 bg-(--gray-bg) rounded-[0.625rem]";
+const buttonClasses =
+  "p-2 hover:bg-(--gray-bg) cursor-pointer rounded-[0.625rem]";
 const iconClasses = "w-5 h-5 text-(--nav-links-text)";
 
 function DarkModeAndBurgerIcon() {
+  const { darkMode, toggleDarkMode } = useDarkMode();
+
   return (
     <div className="flex justify-end gap-4 py-3">
-      <button className={buttonClasses} aria-label="Toggle dark mode">
-        <Moon className={iconClasses} aria-hidden="true" />
+      <button
+        onClick={toggleDarkMode}
+        aria-label="Toggle dark mode"
+        className={buttonClasses}
+      >
+        {darkMode ? (
+          <Sun className={iconClasses} aria-hidden="true" />
+        ) : (
+          <Moon className={iconClasses} aria-hidden="true" />
+        )}
       </button>
 
       <button

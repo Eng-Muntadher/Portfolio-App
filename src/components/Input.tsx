@@ -36,7 +36,7 @@ function Input({
   maxLength,
 }: InputProps) {
   const styles =
-    "bg-[#F9FAFB] border border-[#D1D5DC] text-(--text-color) placeholder-[rgba(16,24,40,0.5)] rounded-[0.625rem] px-4 py-3";
+    "bg-(--skill-bg) border border-(--input-border) text-(--text-color) rounded-[0.625rem] px-4 py-3";
 
   return (
     <>

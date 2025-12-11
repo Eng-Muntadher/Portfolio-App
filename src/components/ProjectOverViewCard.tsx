@@ -2,7 +2,7 @@ function ProjectOverViewCard({ description }: { description: string }) {
   return (
     <section
       aria-labelledby="project-overview"
-      className="rounded-xl border border-gray-200 bg-white shadow-xl p-6"
+      className="rounded-xl border border-(--border-color) bg-(--custom-bg) shadow-xl p-6"
     >
       <h2 id="project-overview" className="text-(--text-color) text-2xl mb-4">
         <span className="text-(--orange-text)">Project </span>

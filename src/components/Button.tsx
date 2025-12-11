@@ -24,10 +24,10 @@ function Button({
   const styles = "flex items-center gap-2 rounded-[0.625rem]";
 
   const variations = {
-    orange: "text-white bg-(--orange-text) shadow-lg",
+    orange: "text-white bg-(--orange-text)",
     light: "text-(--orange-text) border-2 border-(--orange-text)",
     dark: "text-white bg-(--dark-btn-bg)",
-    gray: "text-(--text-color-secondary) border border-[#E5E7EB] bg-[#f9fafb]",
+    gray: "text-(--text-color-secondary) border border-(--border-color) bg-(--custom-bg)",
     red: "text-white bg-gradient-to-b from-red-600 to-red-500",
   };
 

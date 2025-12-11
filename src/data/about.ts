@@ -1,9 +1,9 @@
-import { Award, Code, Heart, Rocket } from "lucide-react";
+import { Award, Code2, Heart, Rocket } from "lucide-react";
 import type { aboutMeFeature } from "../types/types";
 
 export const aboutMeFeatures: aboutMeFeature[] = [
   {
-    icon: Code,
+    icon: Code2,
     title: "Clean Code",
     text: "Writing maintainable and scalable code following best practices",
   },

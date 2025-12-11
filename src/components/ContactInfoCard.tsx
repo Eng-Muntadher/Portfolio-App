@@ -8,7 +8,7 @@ interface ContactInfoCardProps {
 
 function ContactInfoCard({ title, text, icon: Icon }: ContactInfoCardProps) {
   return (
-    <li className="flex items-center gap-4 p-4 rounded-xl border border-gray-200 bg-gray-50 overflow-x-auto scrollbar-custom">
+    <li className="flex items-center gap-4 p-4 rounded-xl border border-(--border-color) bg-(--skill-bg) overflow-x-auto scrollbar-custom">
       <span
         aria-hidden="true"
         className="p-3 bg-(--contact-card-text) rounded-[0.625rem]"

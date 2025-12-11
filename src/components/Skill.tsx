@@ -10,8 +10,8 @@ function Skill({
   addedClasses,
 }: SkillProps) {
   const styles = isUsedInProjectCard
-    ? "text-xs text-[#F54900] px-3 py-1 rounded-full border border-[#FFD6A7] bg-[#FFF7ED]"
-    : "text-sm text-[#1E2939] px-3 py-2 rounded-[0.625rem] border border-gray-200 bg-gray-50";
+    ? "text-xs text-(--project-used-tech-text) px-3 py-1 rounded-full border border-(--project-used-tech-border) bg-(--project-used-tech-bg)"
+    : "text-sm text-(--skill-text) px-3 py-2 rounded-[0.625rem] border border-(--border-color) bg-(--skill-bg)";
 
   return <li className={styles + " " + addedClasses}>{skillName}</li>;
 }
