@@ -1,4 +1,5 @@
 import { Link } from "react-router-dom";
+import { motion } from "framer-motion";
 import { ArrowRight, type LucideIcon } from "lucide-react";
 
 interface NavigationCardItemProps {
@@ -8,6 +9,7 @@ interface NavigationCardItemProps {
   icon: LucideIcon;
   iconBg: string;
   iconTextColor: string;
+  index: number;
 }
 
 function NavigationCardItem({
@@ -17,29 +19,43 @@ function NavigationCardItem({
   icon: Icon,
   iconBg,
   iconTextColor,
+  index,
 }: NavigationCardItemProps) {
   return (
-    <li className="p-8 rounded-2xl border border-(--border-color) bg-(--custom-bg) shadow-lg">
-      <span
-        aria-hidden="true"
-        className="block p-4 w-fit rounded-[0.875rem]"
-        style={{
-          backgroundColor: iconBg,
-          color: iconTextColor,
+    <motion.li
+      initial={{ opacity: 0, y: 50 }}
+      whileInView={{ opacity: 1, y: 0 }}
+      viewport={{ once: true }}
+      transition={{ duration: 0.6, delay: 0.3 * index }}
+    >
+      <motion.div
+        whileHover={{
+          y: -10,
+          transition: { duration: 0.3, ease: "easeOut" },
         }}
+        className="p-8 rounded-2xl border border-(--border-color) bg-(--custom-bg) shadow-lg cursor-pointer hover:border-(--orange-text) delay"
       >
-        <Icon size={32} aria-hidden="true" />
-      </span>
+        <span
+          aria-hidden="true"
+          className="block p-4 w-fit rounded-[0.875rem]"
+          style={{
+            backgroundColor: iconBg,
+            color: iconTextColor,
+          }}
+        >
+          <Icon size={32} aria-hidden="true" />
+        </span>
 
-      <h3 className="text-(--text-color) text-2xl mt-6 mb-3">{heading}</h3>
+        <h3 className="text-(--text-color) text-2xl mt-6 mb-3">{heading}</h3>
 
-      <p className="text-(--gray-text) mb-6">{text}</p>
+        <p className="text-(--gray-text) mb-6">{text}</p>
 
-      <Link to={url} className="text-(--orange-text) flex items-center gap-2">
-        Learn More
-        <ArrowRight size={20} aria-hidden="true" />
-      </Link>
-    </li>
+        <Link to={url} className="text-(--orange-text) flex items-center gap-2">
+          Learn More
+          <ArrowRight size={20} aria-hidden="true" />
+        </Link>
+      </motion.div>
+    </motion.li>
   );
 }
 

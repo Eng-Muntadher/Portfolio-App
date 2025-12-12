@@ -1,3 +1,4 @@
+import { motion } from "framer-motion";
 import type { LucideIcon } from "lucide-react";
 
 interface TechnicalNotesProps {
@@ -22,9 +23,13 @@ function TechnicalNotes({
   iconFill = false,
 }: TechnicalNotesProps) {
   return (
-    <section
+    <motion.section
       aria-labelledby={headingId}
-      className="p-6 rounded-[0.875rem] border border-(--border-color) bg-(--custom-bg-2) shadow-xl"
+      initial={{ opacity: 0, y: 50 }}
+      whileInView={{ opacity: 1, y: 0 }}
+      viewport={{ once: true }}
+      transition={{ duration: 0.6 }}
+      className="p-6 rounded-[0.875rem] border border-(--border-color) bg-(--custom-bg-2) shadow-xl delay"
     >
       <h3
         id={headingId}
@@ -35,8 +40,15 @@ function TechnicalNotes({
       </h3>
 
       <ul className="space-y-4">
-        {notesList.map((note) => (
-          <li key={note} className="flex items-center gap-3">
+        {notesList.map((note, index) => (
+          <motion.li
+            key={index}
+            initial={{ opacity: 0, x: -20 }}
+            whileInView={{ opacity: 1, x: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.4, delay: index * 0.1 }}
+            className="flex items-center gap-3"
+          >
             <div
               style={{ backgroundColor: iconBg }}
               className="p-2 rounded-full"
@@ -49,10 +61,10 @@ function TechnicalNotes({
               />
             </div>
             <span className="text-(--text-color-secondary)">{note}</span>
-          </li>
+          </motion.li>
         ))}
       </ul>
-    </section>
+    </motion.section>
   );
 }
 

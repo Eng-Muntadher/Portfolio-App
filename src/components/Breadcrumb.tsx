@@ -13,7 +13,7 @@ function Breadcrumb({ text, to, ariaLabel }: BreadcrumbProps) {
       <Link
         to={to}
         aria-label={ariaLabel}
-        className="flex items-center gap-2 text-(--orange-text) cursor-pointer mb-8"
+        className="flex items-center gap-2 w-fit text-(--orange-text) cursor-pointer mb-8"
       >
         <span>
           <ArrowLeft size={20} aria-hidden="true" />

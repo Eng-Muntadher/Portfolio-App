@@ -40,14 +40,14 @@ const quickLinks = [
 ];
 
 const linksClasses =
-  "rounded-[0.625rem] bg-(--gray-bg) p-2 text-[var(--nav-links-text)] flex items-center justify-center";
+  "rounded-[0.625rem] bg-(--gray-bg) p-2 text-[var(--nav-links-text)] flex items-center justify-center transition-all duration-300 hover:scale-110 hover:bg-orange-500 hover:text-white";
 
 const currentYear = new Date().getFullYear();
 
 function Footer() {
   return (
     <footer
-      className="px-20 py-12 mt-20 bg-(--custom-bg) border-t border-(--border-color)"
+      className="px-20 py-12 mt-20 bg-(--custom-bg) border-t border-(--border-color) delay"
       role="contentinfo"
     >
       <div className="grid grid-cols-3 gap-8 max-[860px]:grid-cols-1">

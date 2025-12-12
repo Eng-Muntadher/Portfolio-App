@@ -1,8 +1,14 @@
+import { motion } from "framer-motion";
+
 function AboutMeFinalArticle() {
   return (
-    <section
+    <motion.section
       aria-labelledby="heading"
-      className="px-6 flex flex-col items-center pt-10 pb-6 text-center rounded-[0.875rem] border border-(--border-color) bg-(--custom-bg-2) shadow-lg"
+      initial={{ opacity: 0, y: 50 }}
+      whileInView={{ opacity: 1, y: 0 }}
+      viewport={{ once: true }}
+      transition={{ duration: 0.6 }}
+      className="px-6 flex flex-col items-center pt-10 pb-6 text-center rounded-[0.875rem] border border-(--border-color) bg-(--custom-bg-2) shadow-lg delay"
     >
       <h3 id="heading" className="text-3xl text-(--text-color) mb-4">
         <span className="text-(--orange-text)">Always</span> Learning & Growing
@@ -15,7 +21,7 @@ function AboutMeFinalArticle() {
         well-rounded developer who can tackle any challenge with confidence and
         creativity.
       </p>
-    </section>
+    </motion.section>
   );
 }
 

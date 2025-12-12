@@ -31,9 +31,10 @@ const cardData = [
 function NavigationCardList() {
   return (
     <ul className="grid grid-cols-3 max-lg:grid-cols-2 max-md:grid-cols-1 gap-8 px-20 max-xl:px-8">
-      {cardData.map((card) => (
+      {cardData.map((card, i) => (
         <NavigationCardItem
-          key={card.url}
+          key={i}
+          index={i}
           heading={card.heading}
           text={card.text}
           url={card.url}

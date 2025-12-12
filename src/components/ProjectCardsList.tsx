@@ -1,4 +1,5 @@
 import { useLocation } from "react-router-dom";
+import { motion } from "framer-motion";
 import { projects } from "../data/projects";
 import ProjectCard from "./ProjectCard";
 
@@ -25,10 +26,17 @@ function ProjectCardsList() {
   }
 
   return (
-    <ul className="grid grid-cols-3 gap-8 max-lg:grid-cols-2 max-md:grid-cols-1">
-      {filteredProjects.map((project) => (
+    <motion.ul
+      initial={{ opacity: 0, y: 20 }}
+      animate={{ opacity: 1, y: 0 }}
+      exit={{ opacity: 0, y: -20 }}
+      transition={{ duration: 0.5 }}
+      className="grid grid-cols-3 gap-8 max-lg:grid-cols-2 max-md:grid-cols-1"
+    >
+      {filteredProjects.map((project, index) => (
         <ProjectCard
           key={project.id}
+          index={index}
           id={project.id}
           title={project.title}
           description={project.description}
@@ -40,7 +48,7 @@ function ProjectCardsList() {
           isFinished={project.isFinished}
         />
       ))}
-    </ul>
+    </motion.ul>
   );
 }
 

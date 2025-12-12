@@ -1,8 +1,15 @@
+import { motion } from "framer-motion";
+
 function MyStoryArticle() {
   const paragraphsClasses = "text-(--text-color-secondary) text-lg mb-4";
 
   return (
-    <article className="scrollbar-custom rounded-[0.875rem] border border-(--border-color) p-6 bg-(--custom-bg-2) shadow-lg lg:max-h-[470px] overflow-auto">
+    <motion.article
+      initial={{ opacity: 0, x: -50 }}
+      animate={{ opacity: 1, x: 0 }}
+      transition={{ duration: 0.6 }}
+      className="scrollbar-custom rounded-[0.875rem] border border-(--border-color) p-6 bg-(--custom-bg-2) shadow-lg lg:max-h-[470px] overflow-auto delay"
+    >
       <h2 className="text-3xl text-(--orange-text) mb-6">My Story</h2>
 
       <p className={paragraphsClasses}>
@@ -24,7 +31,7 @@ function MyStoryArticle() {
         professional team where I can grow, collaborate, and create meaningful
         digital products.
       </p>
-    </article>
+    </motion.article>
   );
 }
 

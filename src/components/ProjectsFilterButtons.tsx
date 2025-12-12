@@ -1,4 +1,6 @@
 import { useLocation, useNavigate } from "react-router-dom";
+import { motion } from "framer-motion";
+
 import Button from "./Button";
 
 function ProjectsFilterButtons() {
@@ -33,7 +35,12 @@ function ProjectsFilterButtons() {
   ];
 
   return (
-    <div className="flex justify-center gap-3 mx-auto mb-16 flex-wrap">
+    <motion.div
+      initial={{ opacity: 0, y: 20 }}
+      animate={{ opacity: 1, y: 0 }}
+      transition={{ duration: 0.6 }}
+      className="flex justify-center gap-3 mx-auto mb-16 flex-wrap"
+    >
       {buttonsData.map((btn, i) => (
         <Button
           key={i}
@@ -46,7 +53,7 @@ function ProjectsFilterButtons() {
           {btn.text}
         </Button>
       ))}
-    </div>
+    </motion.div>
   );
 }
 

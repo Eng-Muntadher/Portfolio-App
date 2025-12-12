@@ -14,12 +14,9 @@ function ProjectsPage() {
       <SectionHeader
         text="My"
         highlight="Projects"
+        paragraphText="A collection of my recent work and personal projects"
         addedClasses="text-6xl mb-10 max-lg:text-5xl max-md:text-4xl"
       />
-
-      <p className="text-(--gray-text) text-xl text-center mb-16">
-        A collection of my recent work and personal projects
-      </p>
 
       <ProjectsFilterButtons />
 

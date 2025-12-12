@@ -1,5 +1,6 @@
 import { useEffect } from "react";
 import { useParams } from "react-router-dom";
+import { motion } from "framer-motion";
 import {
   AlertCircle,
   ExternalLink,
@@ -71,44 +72,50 @@ function ProjectDetailsPage() {
         ariaLabel="Go back to projects page"
       />
 
-      <h1 className="text-6xl text-(--text-color) mb-6">{project?.title}</h1>
+      <motion.div
+        initial={{ opacity: 0, y: 50 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.6 }}
+      >
+        <h1 className="text-6xl text-(--text-color) mb-6">{project?.title}</h1>
 
-      <p className="text-xl text-(--text-color-secondary) mb-8 leading-7">
-        {project?.subTitle}
-      </p>
+        <p className="text-xl text-(--text-color-secondary) mb-8 leading-7">
+          {project?.subTitle}
+        </p>
 
-      <div className="mb-12">
-        <img
-          src={project?.imageUrl}
-          alt={`Image for the project ${project?.title}`}
-          className="rounded-xl h-168 w-full object-cover"
-        />
-      </div>
+        <div className="mb-12">
+          <img
+            src={project?.imageUrl}
+            alt={`Image for the project ${project?.title}`}
+            className="rounded-xl h-168 w-full object-cover"
+          />
+        </div>
 
-      <ProjectLinksButtons buttons={buttons} />
+        <ProjectLinksButtons buttons={buttons} />
 
-      <div className="grid grid-cols-[1fr_auto] gap-8 mb-8 max-lg:grid-cols-1">
-        <ProjectOverViewCard description={project.description} />
-        <ProjectTechUsed technologiesUsed={project.technologiesUsed} />
-      </div>
+        <div className="grid grid-cols-[1fr_auto] gap-8 mb-8 max-lg:grid-cols-1">
+          <ProjectOverViewCard description={project.description} />
+          <ProjectTechUsed technologiesUsed={project.technologiesUsed} />
+        </div>
 
-      <ProjectKeyFeatures left={left} right={right} />
+        <ProjectKeyFeatures left={left} right={right} />
 
-      <div className="grid grid-cols-2 gap-8 max-md:grid-cols-1">
-        <ProjectChallengesCard
-          title="Challenges"
-          ariaLabelledby="Challenges"
-          text={project?.Challenges}
-          icon={AlertCircle}
-        />
+        <div className="grid grid-cols-2 gap-8 max-md:grid-cols-1">
+          <ProjectChallengesCard
+            title="Challenges"
+            ariaLabelledby="Challenges"
+            text={project?.Challenges}
+            icon={AlertCircle}
+          />
 
-        <ProjectChallengesCard
-          title="Outcome"
-          ariaLabelledby="Outcome"
-          text={project?.outcome}
-          icon={Target}
-        />
-      </div>
+          <ProjectChallengesCard
+            title="Outcome"
+            ariaLabelledby="Outcome"
+            text={project?.outcome}
+            icon={Target}
+          />
+        </div>
+      </motion.div>
     </div>
   );
 }

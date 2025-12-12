@@ -1,8 +1,9 @@
 import { useState } from "react";
-import Input from "./Input";
-import Button from "./Button";
 import { Send } from "lucide-react";
 import { send } from "@emailjs/browser";
+import { motion } from "framer-motion";
+import Input from "./Input";
+import Button from "./Button";
 import toast from "react-hot-toast";
 
 function ContactForm() {
@@ -48,9 +49,12 @@ function ContactForm() {
   }
 
   return (
-    <form
+    <motion.form
+      initial={{ opacity: 0, x: 50 }}
+      animate={{ opacity: 1, x: 0 }}
+      transition={{ duration: 0.6, delay: 0.2 }}
       onSubmit={handleSubmit}
-      className="space-y-6 p-6 rounded-xl border border-(--border-color) bg-(--custom-bg) shadow-lg h-fit"
+      className="space-y-6 p-6 rounded-xl border border-(--border-color) bg-(--custom-bg) shadow-lg h-fit delay"
     >
       <h2 className="text-3xl text-(--text-color) mb-6">
         <span>Send a </span>
@@ -127,7 +131,7 @@ function ContactForm() {
           Send Message
         </Button>
       </div>
-    </form>
+    </motion.form>
   );
 }
 

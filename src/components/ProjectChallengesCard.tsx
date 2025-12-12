@@ -16,7 +16,7 @@ function ProjectChallengesCard({
   return (
     <section
       aria-labelledby={ariaLabelledby}
-      className="rounded-xl border border-(--border-color) bg-(--custom-bg) shadow-xl p-6"
+      className="rounded-xl border border-(--border-color) bg-(--custom-bg) shadow-xl p-6 delay"
     >
       <h2
         id={ariaLabelledby}

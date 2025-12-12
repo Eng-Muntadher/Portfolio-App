@@ -6,29 +6,18 @@ export const projects: Project[] = [
   {
     id: 1,
     title: "Student Managment System",
-    subTitle:
-      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Sed dignissimos odit vitae id",
-    description:
-      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Sed dignissimos odit vitae id commodi totam perferendis dolore explicabo tempore minus iste placeat",
-    technologiesUsed: [
-      "React",
-      "TypeScript",
-      "Recharts",
-      "Lucid Icons",
-      "React Query",
-      "Redux Tool Kit",
-      "More",
-    ],
+    subTitle: "A project to manage the students grades, classes, GPA and more.",
+    description: `A lightweight student records management system with SQL-heavy queries for efficient CRUD 
+                  operations. Built with a Python backend for secure database interactions paired with vanilla JavaScript.
+                   The app has filtering capabilities for quick data access.`,
+    technologiesUsed: ["HTML", "CSS", "JavaScript", "SQL", "Python"],
     keyFeatures: [
-      "Smooth page transitions and animations",
-      "Dark/Light mode toggle",
-      "Responsive design for all devices",
-      "Project showcase with filtering",
-      "Contact form with validation",
-      "SEO optimized",
+      "CRUD operations",
+      "Blue/Light mode toggle support",
+      "filtering based on a student class",
     ],
     Challenges:
-      "Creating a portfolio that stands out while maintaining professional aesthetics and excellent performance. I focused on implementing smooth animations without sacrificing load times.",
+      "Creating this app with CRUD operations using SQL was challanging.",
     outcome:
       "Created a polished portfolio that effectively showcases my work and has received positive feedback from recruiters and fellow developers",
 

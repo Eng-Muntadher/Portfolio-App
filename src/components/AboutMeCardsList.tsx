@@ -1,18 +1,26 @@
+import { motion } from "framer-motion";
 import { aboutMeFeatures } from "../data/about";
+
 import AboutMeCard from "./AboutMeCard";
 
 function AboutMeCardsList() {
   return (
-    <ul className="grid grid-cols-2 gap-6 max-md:grid-cols-1">
-      {aboutMeFeatures.map((feature) => (
+    <motion.ul
+      initial={{ opacity: 0, x: 50 }}
+      animate={{ opacity: 1, x: 0 }}
+      transition={{ duration: 0.6, delay: 0.2 }}
+      className="grid grid-cols-2 gap-6 max-md:grid-cols-1 delay"
+    >
+      {aboutMeFeatures.map((feature, i) => (
         <AboutMeCard
-          key={feature.title}
+          key={i}
+          index={i}
           icon={feature.icon}
           title={feature.title}
           text={feature.text}
         />
       ))}
-    </ul>
+    </motion.ul>
   );
 }
 

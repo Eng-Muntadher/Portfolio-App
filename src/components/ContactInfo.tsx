@@ -1,4 +1,5 @@
 import { Github, Linkedin, Mail, MapPin, Phone, Youtube } from "lucide-react";
+import { motion } from "framer-motion";
 import ContactInfoCard from "./ContactInfoCard";
 
 const contactInfo = [
@@ -31,10 +32,14 @@ const links = [
 
 function ContactInfo() {
   return (
-    <div>
+    <motion.div
+      initial={{ opacity: 0, x: -50 }}
+      animate={{ opacity: 1, x: 0 }}
+      transition={{ duration: 0.6 }}
+    >
       <section
         aria-labelledby="contact-info"
-        className="space-y-6 p-6 rounded-xl border border-(--border-color) bg-(--custom-bg-2) shadow-lg h-fit mb-8"
+        className="space-y-6 p-6 rounded-xl border border-(--border-color) bg-(--custom-bg-2) shadow-lg h-fit mb-8 delay"
       >
         <h2 id="contact-info" className="text-3xl text-(--text-color)">
           <span>Let's </span>
@@ -61,21 +66,19 @@ function ContactInfo() {
 
       <section
         aria-labelledby="contact-links"
-        className="p-6 rounded-xl border border-(--border-color) bg-(--custom-bg) shadow-lg"
+        className="p-6 rounded-xl border border-(--border-color) bg-(--custom-bg) shadow-lg delay"
       >
         <h2 id="contact-links" className="text-xl text-(--text-color) mb-6">
           <span>Find me on </span>
           <span className="text-(--orange-text)">Social Media</span>
         </h2>
-
         <ul className="flex gap-4">
           {links.map((link) => (
-            <li
-              className="text-(--text-color) bg-(--skill-bg) rounded-xl border border-(--border-color) shadow-lg p-4"
-              key={link.url}
-            >
+            <li key={link.url}>
               <a
                 href={link.url}
+                className="block text-(--text-color) bg-(--skill-bg) rounded-xl border border-(--border-color) shadow-lg p-4 
+                   transition-all duration-300 hover:scale-105 hover:bg-orange-500 hover:shadow-xl"
                 target="_blank"
                 rel="noopener noreferrer"
                 aria-label={link.label}
@@ -86,7 +89,7 @@ function ContactInfo() {
           ))}
         </ul>
       </section>
-    </div>
+    </motion.div>
   );
 }
 

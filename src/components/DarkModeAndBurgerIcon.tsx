@@ -2,7 +2,7 @@ import { Menu, Moon, Sun } from "lucide-react";
 import { useDarkMode } from "../hooks/useDarkMode";
 
 const buttonClasses =
-  "p-2 hover:bg-(--gray-bg) cursor-pointer rounded-[0.625rem]";
+  "p-2 hover:bg-(--gray-bg) cursor-pointer rounded-[0.625rem] transition-all ease-in duration-100 focus:outline-none focus-visible:ring-2 focus-visible:ring-(--orange-text)";
 const iconClasses = "w-5 h-5 text-(--nav-links-text)";
 
 function DarkModeAndBurgerIcon() {

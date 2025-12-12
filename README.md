@@ -15,8 +15,10 @@ _A modern showcase of my frontend development journey, skills, and projects._
 - **TypeScript**
 - **Tailwind CSS**
 - **React Router**
+- **React Hot Toast**
 - **Lucide Icons**
 - **Framer Motion**
+- **EmailJs**
 - **React Error Boundary**
 
 ---
@@ -33,6 +35,7 @@ A portfolio designed with performance, accessibility, and user experience in min
 - ✅ Contact form with form validation
 - ✅ SEO optimized with meta tags and semantic HTML
 - ✅ Clean and intuitive navigation
+- ✅ Ability to send an email directly from the website using EmailJs
 - ✅ Dark mode support
 
 ---
@@ -44,7 +47,6 @@ A portfolio designed with performance, accessibility, and user experience in min
 - **Projects** — Showcase of featured work with descriptions
 - **Project Details** — Showcase of details related to a project
 - **Skills** — Technologies and tools I work with
-- **Experience** — Academic background and certifications
 - **Contact** — Get in touch section with contact form
 
 _All pages are fully responsive and accessible._

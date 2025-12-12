@@ -15,12 +15,9 @@ function AboutPage() {
       <SectionHeader
         text="About"
         highlight="Me"
+        paragraphText="Learn more about my journey and what drives me"
         addedClasses="text-6xl mb-10 max-lg:text-5xl max-md:text-4xl"
       />
-
-      <p className="text-(--gray-text) text-xl text-center mb-16">
-        Learn more about my journey and what drives me
-      </p>
 
       <div className="grid grid-cols-2 gap-12 mb-16 max-lg:grid-cols-1">
         <MyStoryArticle />

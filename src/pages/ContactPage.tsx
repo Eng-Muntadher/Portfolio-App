@@ -14,12 +14,9 @@ function ContactPage() {
       <SectionHeader
         text="Get In"
         highlight="Touch"
+        paragraphText="Feel free to reach out for opportunities or just to say hello!"
         addedClasses="text-6xl mb-10 max-lg:text-5xl max-md:text-4xl"
       />
-
-      <p className="text-(--gray-text) text-xl text-center mb-16">
-        Feel free to reach out for opportunities or just to say hello!
-      </p>
 
       <div className="grid grid-cols-2 gap-12 max-lg:grid-cols-1">
         <ContactInfo />

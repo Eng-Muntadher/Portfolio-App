@@ -1,3 +1,4 @@
+import { motion } from "framer-motion";
 import type { LucideIcon } from "lucide-react";
 import Skill from "./Skill";
 
@@ -7,6 +8,7 @@ interface SkillCategoryCardProps {
   iconBgColor: string;
   category: string;
   skills: string[];
+  index: number;
 }
 
 function SkillCategoryCard({
@@ -15,9 +17,15 @@ function SkillCategoryCard({
   iconBgColor,
   category,
   skills,
+  index,
 }: SkillCategoryCardProps) {
   return (
-    <li className="p-6 rounded-xl border border-(--border-color) bg-(--custom-bg-2) shadow-lg min-h-[250px]">
+    <motion.li
+      initial={{ opacity: 0, y: 50 }}
+      animate={{ opacity: 1, y: 0 }}
+      transition={{ duration: 0.6, delay: index * 0.2 }}
+      className="p-6 rounded-xl border border-(--border-color) bg-(--custom-bg-2) shadow-lg min-h-[250px] delay"
+    >
       <div className="flex gap-4 items-center mb-6">
         <span
           style={{
@@ -38,7 +46,7 @@ function SkillCategoryCard({
           <Skill key={skill} skillName={skill} />
         ))}
       </ul>
-    </li>
+    </motion.li>
   );
 }
 
