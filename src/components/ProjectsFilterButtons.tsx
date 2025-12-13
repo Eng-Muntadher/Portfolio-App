@@ -17,11 +17,11 @@ function ProjectsFilterButtons() {
       url: "/projects",
       text: "All Projects",
     },
-    {
-      variation: state === "javascript" ? "orange" : "gray",
-      url: "/projects?tech-used=javascript",
-      text: "JavaScript",
-    },
+    // {
+    //   variation: state === "javascript" ? "orange" : "gray",
+    //   url: "/projects?tech-used=javascript",
+    //   text: "JavaScript",
+    // },
     {
       variation: state === "react" ? "orange" : "gray",
       url: "/projects?tech-used=react",

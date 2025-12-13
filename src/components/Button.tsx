@@ -30,7 +30,7 @@ function Button({
     light:
       "text-(--orange-text) border-2 border-(--orange-text) hover:bg-orange-500 hover:text-white hover:scale-104",
     dark: "text-white bg-(--dark-btn-bg) hover:bg-gray-700 hover:scale-102",
-    gray: "text-(--text-color-secondary) border border-(--border-color) bg-(--custom-bg) hover:bg-gray-800",
+    gray: "text-(--text-color-secondary) border border-(--border-color) bg-(--custom-bg) hover:bg-(--input-border)",
     red: "text-white bg-gradient-to-b from-red-600 to-red-500 hover:shadow-red-500/50 hover:shadow-2xl hover:scale-102 hover:from-red-500 hover:to-red-600 focus:outline-none focus:ring-4 focus:ring-red-400/50 focus:scale-105 active:scale-95",
   };
 
@@ -38,6 +38,8 @@ function Button({
     return (
       <Link
         to={to}
+        target="_blank"
+        rel="noopener noreferrer"
         className={`${styles} ${variations[variation]} ${addedClasses} disabled:opacity-65`}
       >
         {children}

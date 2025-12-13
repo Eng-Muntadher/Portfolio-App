@@ -32,8 +32,8 @@ function ProjectCard({
 }: ProjectCardProps) {
   const buttonsData = [
     { link: liveLink, variation: "orange", text: "Live", icon: Upload },
-    { link: gitHubLink, variation: "gray", text: "Video", icon: Youtube },
-    { link: youtubeLink, variation: "gray", text: "Code", icon: Github },
+    { link: gitHubLink, variation: "gray", text: "Code", icon: Github },
+    { link: youtubeLink, variation: "gray", text: "Video", icon: Youtube },
   ];
 
   // Calculate how many technologies used are there (other than the first 3 that are shown)
@@ -122,14 +122,23 @@ function ProjectCard({
                 {buttonsData.map((btn, i) => (
                   <Button
                     key={i}
-                    isLink={true}
-                    to={btn.link}
                     variation={
                       btn.variation as "orange" | "gray" | "light" | "dark"
                     }
                     addedClasses={`justify-center text-sm px-3 py-2 grow ${
                       btn.variation === "gray" ? "border-2" : ""
                     }`}
+                    onClick={(e) => {
+                      e.stopPropagation();
+
+                      if (btn.link) {
+                        window.open(btn.link, "_blank");
+                      } else {
+                        toast.error(
+                          "This link will be added soon. Please come back later"
+                        );
+                      }
+                    }}
                   >
                     <btn.icon size={16} />
                     {btn.text}
