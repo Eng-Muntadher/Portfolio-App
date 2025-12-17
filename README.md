@@ -2,8 +2,8 @@
 
 _A modern showcase of my frontend development journey, skills, and projects._
 
-🚀 **Live Demo:** coming soon...
-🎨 **Figma Design:** coming soon...
+🚀 **Live Demo:** [muntadher-ahmed.vercel.app](https://muntadher-ahmed.vercel.app)
+🎨 **Figma Design:** [Portfolio-App Figma](https://www.figma.com/design/1LNGOAX1BV4PI1sEHHiqBD/Portfolio-Web-App-Design?node-id=3-13162&m=dev)
 
 **This Website** is my personal portfolio showcasing my journey as a **frontend developer**. It highlights my technical skills, featured projects, educational background, and professional accomplishments — all wrapped in a clean, responsive, and performant interface built with modern web technologies.
 
@@ -58,23 +58,23 @@ _All pages are fully responsive and accessible._
 
 ### Home Page
 
-![Home](./.github/assets/home.png)
+![Home](./.github/assets/Home.png)
 
 ### About Page
 
-![About](./.github/assets/about.png)
+![About](./.github/assets/About.png)
 
 ### Skills Page
 
-![Skills](./.github/assets/skills.png)
+![Skills](./.github/assets/Skills.png)
 
 ### Projects Page
 
-![Projects](./.github/assets/projects.png)
+![Projects](./.github/assets/Projects.png)
 
 ### Contact Page
 
-![Contact](./.github/assets/contact.png)
+![Contact](./.github/assets/Contact.png)
 
 ### Project Details Page
 
