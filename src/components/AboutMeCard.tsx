@@ -8,6 +8,7 @@ interface AboutMeCardProps {
   index: number;
 }
 
+// These cards show some features about my coding skills
 function AboutMeCard({ icon: Icon, title, text, index }: AboutMeCardProps) {
   return (
     <motion.li

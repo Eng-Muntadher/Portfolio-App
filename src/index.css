@@ -44,16 +44,19 @@
   --input-border: #364153;
 }
 
+/* Add theme transition delay for the root element */
 html {
   transition: background-color 0.4s ease, color 0.4s ease,
     border-color 0.4s ease, fill 0.3s ease, stroke 0.3s ease;
 }
 
-/* This is used to add transition delay for many elements */
+/* This is used to add theme transition delay for many elements */
 .delay {
   transition: background-color 0.4s ease, color 0.4s ease,
     border-color 0.4s ease, fill 0.3s ease, stroke 0.3s ease;
 }
+/* Insted of the method above to add delay, I could have done "*"
+ to target all elements but this method should give way better perfomance */
 
 /* Target the currently selected nav bar link*/
 .active {
@@ -62,13 +65,13 @@ html {
   background-color: var(--orange-text);
 }
 
-/* Apply to a specific container */
+/* A custom scroll bar styling */
 .scrollbar-custom {
   scrollbar-width: thin; /* Firefox */
   scrollbar-color: #ff6900 transparent; /* Firefox */
 }
 
-/* Chrome, Edge, Safari */
+/* For Chrome, Edge, Safari */
 .scrollbar-custom::-webkit-scrollbar {
   width: 6px; /* thickness */
 }
@@ -80,4 +83,10 @@ html {
 .scrollbar-custom::-webkit-scrollbar-thumb {
   background-color: #ff6900; /* thumb color */
   border-radius: 3px; /* rounded thumb */
+}
+
+/* Style the page selection */
+::selection {
+  background-color: #ff6900;
+  color: white;
 }

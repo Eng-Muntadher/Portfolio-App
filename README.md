@@ -36,7 +36,8 @@ A portfolio designed with performance, accessibility, and user experience in min
 - ✅ SEO optimized with meta tags and semantic HTML
 - ✅ Clean and intuitive navigation
 - ✅ Ability to send an email directly from the website using EmailJs
-- ✅ Dark mode support
+- ✅ Dark them support
+- ✅ Custom error page for handling 404 errors and JS runtime errors
 
 ---
 
@@ -55,7 +56,29 @@ _All pages are fully responsive and accessible._
 
 ## 🖼 Screenshots
 
-_Screenshots will be added soon._
+### Home Page
+
+![Home](./.github/assets/home.png)
+
+### About Page
+
+![About](./.github/assets/about.png)
+
+### Skills Page
+
+![Skills](./.github/assets/skills.png)
+
+### Projects Page
+
+![Projects](./.github/assets/projects.png)
+
+### Contact Page
+
+![Contact](./.github/assets/contact.png)
+
+### Project Details Page
+
+![Project Details](./.github/assets/Project-Details.png)
 
 ---
 

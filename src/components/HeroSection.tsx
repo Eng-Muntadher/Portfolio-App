@@ -12,8 +12,9 @@ function HeroSection() {
   return (
     <section
       aria-labelledby="my-name"
-      className="flex items-center justify-between px-20 max-xl:px-8 mb-40 max-lg:flex-col"
+      className="flex items-center justify-between mb-40 max-lg:flex-col"
     >
+      {/* Hero section text */}
       <div className="max-lg:mb-12 max-lg:self-start">
         <motion.div
           initial={{ opacity: 0, x: -50 }}
@@ -53,6 +54,7 @@ function HeroSection() {
             </p>
           </motion.div>
 
+          {/* Actions buttons for Hero section */}
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
@@ -62,7 +64,7 @@ function HeroSection() {
             <Button
               variation="orange"
               onClick={() => navigate("/projects")}
-              addedClasses="px-6 py-3"
+              addedClasses="px-6 py-3 max-[390px]:grow max-[390px]:justify-center"
             >
               <ArrowRight aria-hidden="true" />
               View My Work
@@ -71,23 +73,24 @@ function HeroSection() {
             <Button
               variation="light"
               onClick={() => navigate("/contact")}
-              addedClasses="px-6 py-3"
+              addedClasses="px-6 py-3 max-[390px]:grow max-[390px]:justify-center"
             >
               Contact Me
             </Button>
 
-            <Button
-              variation="dark"
-              onClick={() => console.log("Do later...")}
-              addedClasses="px-6 py-3"
+            <a
+              href="/cv.pdf"
+              download="Muntadher-Ahmed-CV.pdf"
+              className="flex items-center gap-2 px-6 py-3 rounded-[0.625rem] cursor-pointer transition-all duration-300  focus:outline-none focus-visible:ring-2 focus-visible:ring-(--orange-text) text-white bg-(--dark-btn-bg) hover:bg-gray-700 hover:scale-102 max-[390px]:grow max-[390px]:justify-center"
             >
               <Download aria-hidden="true" />
               Download CV
-            </Button>
+            </a>
           </motion.div>
         </motion.div>
       </div>
 
+      {/* Hero section image */}
       <motion.div
         initial={{ opacity: 0, x: 50 }}
         animate={{ opacity: 1, x: 0 }}

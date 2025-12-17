@@ -8,7 +8,7 @@ function ProjectKeyFeatures({ left, right }: ProjectKeyFeaturesProps) {
   return (
     <section
       aria-labelledby="key-features"
-      className="rounded-xl border border-(--border-color) bg-(--custom-bg) shadow-xl p-6  mb-8 delay"
+      className="rounded-xl border border-(--border-color) bg-(--custom-bg) shadow-xl p-6 mb-8 delay"
     >
       <h2
         id="key-features"
@@ -26,12 +26,13 @@ function ProjectKeyFeatures({ left, right }: ProjectKeyFeaturesProps) {
       </h2>
 
       <div className="grid grid-cols-2 justify-between">
+        {/* Left Side of features */}
         <ul className="space-y-4">
           {left.map((el) => (
-            <li key={el} className="flex items-center gap-3">
+            <li key={el} className="flex items-center max-lg:items-start gap-3">
               <CheckCircle2
                 size={20}
-                className="text-(--orange-text)"
+                className="text-(--orange-text) shrink-0 max-lg:mt-0.5"
                 aria-hidden="true"
               />
               <span className="text-(--text-color-secondary)">{el}</span>
@@ -39,12 +40,13 @@ function ProjectKeyFeatures({ left, right }: ProjectKeyFeaturesProps) {
           ))}
         </ul>
 
+        {/* Right Side of features */}
         <ul className="space-y-4">
           {right.map((el) => (
-            <li key={el} className="flex items-center gap-3">
+            <li key={el} className="flex items-center max-lg:items-start gap-3">
               <CheckCircle2
                 size={20}
-                className="text-(--orange-text)"
+                className="text-(--orange-text) shrink-0 max-lg:mt-0.5"
                 aria-hidden="true"
               />
               <span className="text-(--text-color-secondary)">{el}</span>

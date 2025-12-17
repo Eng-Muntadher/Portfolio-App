@@ -1,6 +1,8 @@
 import { useEffect } from "react";
 import { useParams } from "react-router-dom";
 import { motion } from "framer-motion";
+import { projects } from "../data/projects";
+import type { ProjectButtonsDataType } from "../types/types";
 import {
   AlertCircle,
   ExternalLink,
@@ -9,8 +11,6 @@ import {
   Target,
   Youtube,
 } from "lucide-react";
-import { projects } from "../data/projects";
-import type { ProjectButtonsDataType } from "../types/types";
 import ProjectLinksButtons from "../components/ProjectLinksButtons";
 import ProjectOverViewCard from "../components/ProjectOverViewCard";
 import ProjectTechUsed from "../components/ProjectTechUsed";
@@ -19,6 +19,7 @@ import ProjectChallengesCard from "../components/ProjectChallengesCard";
 import Breadcrumb from "../components/Breadcrumb";
 
 function ProjectDetailsPage() {
+  // Get the current project id from the URL
   const { id } = useParams<{ id: string }>();
 
   // This use effect resets the scroll of the page to the top
@@ -28,6 +29,7 @@ function ProjectDetailsPage() {
 
   if (!id) return;
 
+  // Get the specific project with this id
   const project = projects.filter((project) => project.id === +id).at(0);
 
   if (!project) return;
@@ -59,13 +61,14 @@ function ProjectDetailsPage() {
     },
   ];
 
-  // Split array into 2 columns (handles odd numbers as well)
+  // Split the key features array into 2 columns for better display (handles odd numbers as well)
   const mid = Math.ceil(project.keyFeatures.length / 2);
   const left = project.keyFeatures.slice(0, mid);
   const right = project.keyFeatures.slice(mid);
 
   return (
-    <div className="px-52 max-xl:px-8">
+    <div className="px-32 max-xl:px-0">
+      {/* Back button */}
       <Breadcrumb
         text="Back To Projects"
         to="/projects"
@@ -83,14 +86,16 @@ function ProjectDetailsPage() {
           {project?.subTitle}
         </p>
 
+        {/* Project image */}
         <div className="mb-12">
           <img
             src={project?.imageUrl}
             alt={`Image for the project ${project?.title}`}
-            className="rounded-xl h-168 w-full object-cover"
+            className="rounded-xl w-full h-auto md:h-168 md:object-cover md:object-center"
           />
         </div>
 
+        {/* Live links, Figma links, ... */}
         <ProjectLinksButtons buttons={buttons} />
 
         <div className="grid grid-cols-[1fr_auto] gap-8 mb-8 max-lg:grid-cols-1">
@@ -100,6 +105,7 @@ function ProjectDetailsPage() {
 
         <ProjectKeyFeatures left={left} right={right} />
 
+        {/* Additional project info */}
         <div className="grid grid-cols-2 gap-8 max-md:grid-cols-1">
           <ProjectChallengesCard
             title="Challenges"

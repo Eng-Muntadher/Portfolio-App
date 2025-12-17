@@ -1,6 +1,5 @@
 import { motion } from "framer-motion";
 import { aboutMeFeatures } from "../data/about";
-
 import AboutMeCard from "./AboutMeCard";
 
 function AboutMeCardsList() {

@@ -21,8 +21,8 @@ function MyStoryArticle() {
       <p className={paragraphsClasses}>
         Over the past year and a half, I’ve developed strong experience with
         React, TypeScript, and Tailwind CSS, crafting interfaces that are both
-        functional and visually refined. I care deeply about maintainable code,
-        performance, and delivering seamless user experiences.
+        functional and visually refined. I care very much about maintainable
+        code, performance, and delivering seamless user experiences.
       </p>
 
       <p className={paragraphsClasses}>

@@ -10,7 +10,7 @@ function ProjectsPage() {
   }, []);
 
   return (
-    <div className="px-20 max-xl:px-8">
+    <div>
       <SectionHeader
         text="My"
         highlight="Projects"

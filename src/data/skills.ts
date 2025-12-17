@@ -32,7 +32,7 @@ export const skillsInfo: SkillCategory[] = [
       "Tailwind CSS",
       "CSS Modules",
       "Styled Components",
-      "Responsive Design",
+      "Framer Motion",
     ],
   },
   {
@@ -54,7 +54,18 @@ export const skillsInfo: SkillCategory[] = [
     iconColor: "#FFE66D",
     iconBgColor: "#FFE66D20",
     category: "Tools & Workflow",
-    skills: ["Git & GitHub", "Vite", "VS Code", "Figma", "Chrome DevTools"],
+
+    skills: [
+      "Git & GitHub",
+      "Vite",
+      "Vercel",
+      "ESLint",
+      "Prettier",
+      "npm",
+      "Chrome DevTools",
+      "Redux DevTools",
+      "React Query DevTools",
+    ],
   },
   {
     icon: Stars,
@@ -62,7 +73,6 @@ export const skillsInfo: SkillCategory[] = [
     iconBgColor: "#A8E6CF20",
     category: "Libraries & Frameworks",
     skills: [
-      "Framer Motion",
       "React Hook Form",
       "Recharts",
       "React Hot Toast",

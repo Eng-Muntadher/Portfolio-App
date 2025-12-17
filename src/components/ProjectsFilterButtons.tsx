@@ -9,19 +9,20 @@ function ProjectsFilterButtons() {
   const { search } = useLocation();
   const params = new URLSearchParams(search);
 
+  // Get the current projects filter for technologies used
   const state = params.get("tech-used");
-  // transition-all duration-300
+
   const buttonsData = [
     {
       variation: state === null ? "orange" : "gray",
       url: "/projects",
       text: "All Projects",
     },
-    // {
-    //   variation: state === "javascript" ? "orange" : "gray",
-    //   url: "/projects?tech-used=javascript",
-    //   text: "JavaScript",
-    // },
+    {
+      variation: state === "javascript" ? "orange" : "gray",
+      url: "/projects?tech-used=javascript",
+      text: "JavaScript",
+    },
     {
       variation: state === "react" ? "orange" : "gray",
       url: "/projects?tech-used=react",
@@ -45,7 +46,7 @@ function ProjectsFilterButtons() {
         <Button
           key={i}
           variation={btn.variation as "orange" | "gray" | "light" | "dark"}
-          onClick={() => navigate(btn.url)}
+          onClick={() => navigate(btn.url)} // set the url with a filter
           addedClasses={`px-6 py-3  ${
             btn.variation === "orange" ? "shadow-lg shadow-orange-500/50" : ""
           }`}

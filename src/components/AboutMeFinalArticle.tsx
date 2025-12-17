@@ -10,9 +10,9 @@ function AboutMeFinalArticle() {
       transition={{ duration: 0.6 }}
       className="px-6 flex flex-col items-center pt-10 pb-6 text-center rounded-[0.875rem] border border-(--border-color) bg-(--custom-bg-2) shadow-lg delay"
     >
-      <h3 id="heading" className="text-3xl text-(--text-color) mb-4">
+      <h2 id="heading" className="text-3xl text-(--text-color) mb-4">
         <span className="text-(--orange-text)">Always</span> Learning & Growing
-      </h3>
+      </h2>
 
       <p className="text-(--text-color-secondary) text-lg max-w-188">
         I'm constantly exploring new technologies and improving my skills. I’m

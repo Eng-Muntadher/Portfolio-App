@@ -42,8 +42,10 @@ function ProjectCard({
 
   function handleClick() {
     if (isFinished) {
+      // Navigate to projects details page
       navigate(`/project-details/${id}`);
     } else {
+      // Just in case this is an unfinished project
       toast.error(
         "This Project is not finished yet! Please visit later to view it"
       );
@@ -62,22 +64,32 @@ function ProjectCard({
         },
       }}
     >
-      <motion.button
+      <motion.div
         whileHover={{
           y: -10,
           transition: { duration: 0.4, ease: "easeOut" },
         }}
         onClick={handleClick}
+        role="button"
+        tabIndex={0}
+        onKeyDown={(e) => {
+          if (e.key === "Enter" || e.key === " ") {
+            handleClick();
+          }
+        }}
         className="rounded-2xl border border-(--border-color) bg-(--custom-bg-2) shadow-xl hover:border-(--orange-text) cursor-pointer focus:outline-none focus:border-(--orange-text) delay group overflow-hidden h-full flex flex-col"
       >
+        {/* Project image */}
         <div className="relative overflow-hidden">
           <img
             src={imageUrl}
             alt={`Preview of project: ${title}`}
             className="object-cover w-full h-56 rounded-t-2xl transition-transform duration-500 group-hover:scale-110"
           />
+          {/* Overlay on image when hovering */}
           <div className="absolute inset-0 group-hover:bg-black/30 delay z-20 rounded-t-2xl"></div>
 
+          {/* Overlay on image if it's an unfinished project */}
           {!isFinished && (
             <div className="absolute inset-0 bg-black/45 flex items-center justify-center z-20 rounded-t-2xl">
               <div className="flex items-center gap-2 text-base px-5 py-3 rounded-lg text-white bg-orange-500 shadow-lg">
@@ -88,17 +100,19 @@ function ProjectCard({
           )}
         </div>
 
+        {/* Title */}
         <div className="p-6 flex flex-col flex-1">
           <h2 className="text-xl text-start text-(--text-color) mb-3">
             {title}
           </h2>
 
+          {/* Description */}
           <p className="text-sm text-start text-(--gray-text) mb-5 line-clamp-3">
             {description}
           </p>
 
-          {/* Technologies used in this project */}
           <div className="mt-auto">
+            {/* Technologies used in this project */}
             <ul className="flex gap-2 flex-wrap mb-4">
               {/* SHow only first 3 used technologies in the cart */}
               {technologiesUsed.slice(0, 3).map((tech) => (
@@ -119,31 +133,33 @@ function ProjectCard({
             {/* Project action buttons */}
             {isFinished ? (
               <div className="flex gap-2 flex-wrap">
-                {buttonsData.map((btn, i) => (
-                  <Button
-                    key={i}
-                    variation={
-                      btn.variation as "orange" | "gray" | "light" | "dark"
-                    }
-                    addedClasses={`justify-center text-sm px-3 py-2 grow ${
-                      btn.variation === "gray" ? "border-2" : ""
-                    }`}
-                    onClick={(e) => {
-                      e.stopPropagation();
-
-                      if (btn.link) {
-                        window.open(btn.link, "_blank");
-                      } else {
-                        toast.error(
-                          "This link will be added soon. Please come back later"
-                        );
+                {buttonsData.map((btn, i) =>
+                  btn.link !== "none" ? (
+                    <Button
+                      key={i}
+                      variation={
+                        btn.variation as "orange" | "gray" | "light" | "dark"
                       }
-                    }}
-                  >
-                    <btn.icon size={16} />
-                    {btn.text}
-                  </Button>
-                ))}
+                      addedClasses={`justify-center text-sm px-3 py-2 grow ${
+                        btn.variation === "gray" ? "border-2" : ""
+                      }`}
+                      onClick={(e) => {
+                        e.stopPropagation();
+
+                        if (btn.link) {
+                          window.open(btn.link, "_blank");
+                        } else {
+                          toast.error(
+                            "This link will be added soon. Please come back later"
+                          );
+                        }
+                      }}
+                    >
+                      <btn.icon size={16} />
+                      {btn.text}
+                    </Button>
+                  ) : null
+                )}
               </div>
             ) : (
               <div className="justify-center text-sm px-3 py-2 w-full opacity-70 flex items-center gap-2 rounded-[0.625rem] text-(--text-color-secondary) border-(--border-color) bg-(--custom-bg-2) border-3">
@@ -153,7 +169,7 @@ function ProjectCard({
             )}
           </div>
         </div>
-      </motion.button>
+      </motion.div>
     </motion.li>
   );
 }

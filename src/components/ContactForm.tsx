@@ -19,21 +19,22 @@ function ContactForm() {
       toast.error("Please Fill All Required Forms!");
       return;
     }
+
     handleReset();
     setIsSending(true);
 
+    // Here I used emailjs to handle sending emails functionality
     try {
       await send(
-        "service_wnpnm29", // replace with your EmailJS service ID
-        "template_p2wil41", // replace with your EmailJS template ID
-        { name, email, message }, // template variables
-        "P2ymhB9tnH88shhW8" // replace with your EmailJS public key
+        "service_wnpnm29",
+        "template_p2wil41",
+        { name, email, message },
+        "P2ymhB9tnH88shhW8"
       );
 
+      // On sucess message/reset inputs
       toast.success("Message sent successfully!");
-      setName("");
-      setEmail("");
-      setMessage("");
+      handleReset();
     } catch (err) {
       console.error(err);
       toast.error("Failed to send message. Please try again later.");
@@ -121,6 +122,7 @@ function ContactForm() {
           addedClasses="h-[170px] max-h-[200px] min-h-[170px] w-full"
         />
 
+        {/* Submit button */}
         <Button
           type="submit"
           variation="orange"

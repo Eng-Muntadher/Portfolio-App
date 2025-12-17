@@ -8,7 +8,7 @@ function ProjectLinksButtons({ buttons }: ProjectLinksButtonsProps) {
   return (
     <div className="flex gap-4 flex-wrap mb-12">
       {buttons.map((btn, i) =>
-        btn.url ? (
+        btn.url && btn.url !== "none" ? (
           <Button
             key={i}
             variation={btn.variation}

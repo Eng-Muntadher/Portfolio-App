@@ -15,6 +15,7 @@ export default function SectionHeader({
   addedClasses = "",
   paragraphText,
 }: SectionTitleProps) {
+  // This allows us to pass the level of heading as prop for better accessibility and heading hierarchy
   const Tag = `h${level}` as const;
 
   return (
@@ -36,6 +37,7 @@ export default function SectionHeader({
         ></span>
       </Tag>
 
+      {/* Text below the heading  */}
       {paragraphText ? (
         <p className="text-(--gray-text) text-xl text-center mb-16">
           {paragraphText}

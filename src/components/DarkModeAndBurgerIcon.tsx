@@ -1,5 +1,7 @@
 import { Menu, Moon, Sun } from "lucide-react";
 import { useDarkMode } from "../hooks/useDarkMode";
+import { useState } from "react";
+import MobileNavMenu from "./MobileMenu";
 
 const buttonClasses =
   "p-2 hover:bg-(--gray-bg) cursor-pointer rounded-[0.625rem] transition-all ease-in duration-100 focus:outline-none focus-visible:ring-2 focus-visible:ring-(--orange-text)";
@@ -7,6 +9,11 @@ const iconClasses = "w-5 h-5 text-(--nav-links-text)";
 
 function DarkModeAndBurgerIcon() {
   const { darkMode, toggleDarkMode } = useDarkMode();
+  const [isopen, setIsOpen] = useState(false);
+
+  function handleSetOpen(value: boolean) {
+    setIsOpen(value);
+  }
 
   return (
     <div className="flex justify-end gap-4 py-3">
@@ -24,10 +31,18 @@ function DarkModeAndBurgerIcon() {
 
       <button
         className={`${buttonClasses} md:hidden`}
+        onClick={() => setIsOpen(!isopen)}
         aria-label="Open Mobile window"
       >
         <Menu className={iconClasses} aria-hidden="true" />
       </button>
+
+      <MobileNavMenu
+        open={isopen}
+        setIsOpen={handleSetOpen}
+        isDarkMode={darkMode}
+        toggleTheme={toggleDarkMode}
+      />
     </div>
   );
 }

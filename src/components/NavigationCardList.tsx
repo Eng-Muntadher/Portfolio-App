@@ -4,19 +4,19 @@ import NavigationCardItem from "./NavigationCardItem";
 const cardData = [
   {
     heading: "View My Work",
-    text: "Explore my portfolio of projects",
+    text: "Explore my portfolio projects",
     icon: Code,
     iconBg: "rgba(255, 105, 0, 0.20)",
     iconTextColor: "var(--orange-text)",
     url: "/projects",
   },
   {
-    heading: "My Experience",
-    text: "Education and achievements",
+    heading: "My Skills",
+    text: "See my technical Skills",
     icon: Briefcase,
     iconBg: "rgba(43, 127, 255, 0.20)",
     iconTextColor: "#2B7FFF",
-    url: "/Experience",
+    url: "/skills",
   },
   {
     heading: "Get In Touch",
@@ -30,7 +30,7 @@ const cardData = [
 
 function NavigationCardList() {
   return (
-    <ul className="grid grid-cols-3 max-lg:grid-cols-2 max-md:grid-cols-1 gap-8 px-20 max-xl:px-8">
+    <ul className="grid grid-cols-3 max-lg:grid-cols-2 max-md:grid-cols-1 gap-8">
       {cardData.map((card, i) => (
         <NavigationCardItem
           key={i}

@@ -14,7 +14,7 @@ const socialLinks = [
   },
   {
     Icon: Youtube,
-    href: "/",
+    href: "https://youtube.com",
     label: "Vist my YouTube chanel",
   },
   {
@@ -30,7 +30,7 @@ const quickLinks = [
     { to: "/skills", label: "Skills" },
   ],
   [
-    { to: "/experience", label: "Experience" },
+    { to: "/project-details/1", label: "MA Vault" },
     { to: "/projects", label: "Projects" },
   ],
   [
@@ -40,7 +40,7 @@ const quickLinks = [
 ];
 
 const linksClasses =
-  "rounded-[0.625rem] bg-(--gray-bg) p-2 text-[var(--nav-links-text)] flex items-center justify-center transition-all duration-300 hover:scale-110 hover:bg-orange-500 hover:text-white";
+  "rounded-[0.625rem] bg-(--gray-bg) p-2 text-[var(--nav-links-text)] flex items-center justify-center transition-all duration-300 hover:scale-110 hover:bg-orange-500 hover:text-white focus:outline-none focus:scale-110 focus:bg-orange-500 focus:text-white";
 
 const currentYear = new Date().getFullYear();
 
@@ -50,8 +50,10 @@ function Footer() {
       className="px-20 py-12 mt-20 bg-(--custom-bg) border-t border-(--border-color) delay"
       role="contentinfo"
     >
+      {/* Main content */}
       <div className="grid grid-cols-3 gap-8 max-[860px]:grid-cols-1">
         <div className="max-[860px]:flex max-[860px]:flex-col max-[860px]:items-center">
+          {/* Footer text */}
           <h3 className="text-(--text-color) mb-4">
             <span>Muntadher </span>
             <span className="text-(--orange-text)">Ahmed</span>
@@ -63,6 +65,7 @@ function Footer() {
           </p>
         </div>
 
+        {/* Footer nav links */}
         <nav
           className="flex flex-col items-center"
           aria-label="Footer Navigation"
@@ -79,7 +82,7 @@ function Footer() {
                   <Link
                     key={link.to}
                     to={link.to}
-                    className="hover:text-(--orange-text)"
+                    className="hover:text-(--orange-text) focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-(--orange-text)"
                   >
                     {link.label}
                   </Link>
@@ -89,6 +92,7 @@ function Footer() {
           </div>
         </nav>
 
+        {/* Footer external links */}
         <div className="flex flex-col items-end max-[860px]:items-center">
           <div className="flex flex-col items-center">
             <h3 className="text-(--text-color) mb-4">Connect</h3>
@@ -113,10 +117,12 @@ function Footer() {
 
       <hr className="border-t border-(--border-color) my-8" />
 
+      {/* Credits */}
       <p className="text-(--gray-text) text-sm text-center mb-2">
         Built by Muntadher Ahmed
       </p>
 
+      {/* Rights */}
       <p className="text-[#6A7282] text-sm text-center">
         © {currentYear} All rights reserved.
       </p>

@@ -37,6 +37,7 @@ function ContactInfo() {
       animate={{ opacity: 1, x: 0 }}
       transition={{ duration: 0.6 }}
     >
+      {/* Contact info section */}
       <section
         aria-labelledby="contact-info"
         className="space-y-6 p-6 rounded-xl border border-(--border-color) bg-(--custom-bg-2) shadow-lg h-fit mb-8 delay"
@@ -64,6 +65,7 @@ function ContactInfo() {
         </ul>
       </section>
 
+      {/* Contact links section */}
       <section
         aria-labelledby="contact-links"
         className="p-6 rounded-xl border border-(--border-color) bg-(--custom-bg) shadow-lg delay"
@@ -72,13 +74,14 @@ function ContactInfo() {
           <span>Find me on </span>
           <span className="text-(--orange-text)">Social Media</span>
         </h2>
+
+        {/* contact links icons */}
         <ul className="flex gap-4">
           {links.map((link) => (
             <li key={link.url}>
               <a
                 href={link.url}
-                className="block text-(--text-color) bg-(--skill-bg) rounded-xl border border-(--border-color) shadow-lg p-4 
-                   transition-all duration-300 hover:scale-105 hover:bg-orange-500 hover:shadow-xl"
+                className="block text-(--text-color) bg-(--skill-bg) rounded-xl border border-(--border-color) shadow-lg p-4 transition-all duration-300 hover:scale-105 hover:bg-orange-500 hover:shadow-xl focus:scale-105 focus:bg-orange-500 focus:shadow-xl focus:outline-none"
                 target="_blank"
                 rel="noopener noreferrer"
                 aria-label={link.label}

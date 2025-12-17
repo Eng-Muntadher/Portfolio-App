@@ -3,6 +3,7 @@ import {
   Navigate,
   RouterProvider,
 } from "react-router-dom";
+import { Toaster } from "react-hot-toast";
 
 import AppLayout from "./components/AppLayout";
 import Home from "./pages/HomePage";
@@ -11,12 +12,12 @@ import SkillsPage from "./pages/SkillsPage";
 import ProjectsPage from "./pages/ProjectsPage";
 import ContactPage from "./pages/ContactPage";
 import ProjectDetailsPage from "./pages/ProjectDetailsPage";
-import { Toaster } from "react-hot-toast";
+import ErrorPage from "./pages/ErrorPage";
 
 const router = createBrowserRouter([
   {
     element: <AppLayout />,
-    // errorElement: <ErrorComponent />,
+    errorElement: <ErrorPage />,
     children: [
       {
         path: "/",

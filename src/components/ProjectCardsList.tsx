@@ -7,10 +7,12 @@ function ProjectCardsList() {
   const { search } = useLocation();
   const params = new URLSearchParams(search);
 
+  // Get the current projects filter for technologies used
   const state = params.get("tech-used");
 
   let filteredProjects = projects;
 
+  // Filter the projects based on usage of Vanilla JS, React or Next.js
   if (state === "react") {
     filteredProjects = projects.filter((project) =>
       project.technologiesUsed.includes("React")

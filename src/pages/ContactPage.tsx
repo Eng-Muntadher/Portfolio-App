@@ -10,7 +10,7 @@ function ContactPage() {
   }, []);
 
   return (
-    <div className="px-20 max-xl:px-8">
+    <div>
       <SectionHeader
         text="Get In"
         highlight="Touch"
