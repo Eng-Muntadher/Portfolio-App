@@ -49,8 +49,9 @@ function HeroSection() {
             </p>
 
             <p className="text-xl text-(--text-color-secondary) mb-8 max-w-154">
-              Fourth Year Computer Engineering Student passionate about creating
-              beautiful, responsive web applications with modern technologies.
+              I build beautiful, responsive web applications using modern
+              technologies like React and TypeScript, focusing on clean,
+              maintainable code and seamless user experiences.
             </p>
           </motion.div>
 

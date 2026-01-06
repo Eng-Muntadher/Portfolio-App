@@ -29,6 +29,7 @@ function ProjectCardsList() {
 
   return (
     <motion.ul
+      key={state || "all"} // This forces re-mount when filter changes (so that animation fires each time)
       initial={{ opacity: 0, y: 20 }}
       animate={{ opacity: 1, y: 0 }}
       exit={{ opacity: 0, y: -20 }}

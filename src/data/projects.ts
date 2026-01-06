@@ -61,7 +61,7 @@ export const projects: Project[] = [
     imageUrl: maVault,
     liveLink: "https://ma-vault.vercel.app/home",
     gitHubLink: "https://github.com/Eng-Muntadher/MAVault",
-    youtubeLink: "",
+    youtubeLink: "https://youtu.be/i7olw6nLtrA?si=y0nEU4Pa603foTKK",
     figmaLink:
       "https://www.figma.com/design/fN0jn4IeJC3jrNPjTNmX0M/MA-Vault?t=gCRPkwud0Hbc3Jej-0",
     isFinished: true,
@@ -118,7 +118,7 @@ export const projects: Project[] = [
     imageUrl: jobTracker,
     liveLink: "https://jobtracker-99.vercel.app/",
     gitHubLink: "https://github.com/Eng-Muntadher/jobtracker",
-    youtubeLink: "",
+    youtubeLink: "https://youtu.be/jt0IO6CTkw4?si=Rv3eq8Q020tTHo9I",
     figmaLink:
       "https://www.figma.com/design/mpsBxlJ4se2CLcwh9es5M3/Job-Application-Tracker?node-id=10-38552&p=f&t=tReQciv5etDKg8Ec-0",
     isFinished: true,
@@ -166,7 +166,7 @@ export const projects: Project[] = [
     imageUrl: portfolio,
     liveLink: "https://muntadher-ahmed.vercel.app",
     gitHubLink: "https://github.com/Eng-Muntadher/Portfolio-App",
-    youtubeLink: "",
+    youtubeLink: "https://www.youtube.com/shorts/L7H_s2v_TY8?feature=share",
     figmaLink:
       "https://www.figma.com/design/1LNGOAX1BV4PI1sEHHiqBD/Portfolio-Web-App-Design?node-id=3-13162&m=dev",
     isFinished: true,
@@ -209,6 +209,7 @@ export const projects: Project[] = [
     imageUrl: studentsManager,
     gitHubLink: "https://github.com/Eng-Muntadher/Student-Management-System",
     liveLink: "none",
+    youtubeLink: "https://youtu.be/-qiwMc3VMCw?si=VKpItWM6p5tTrbqg",
     isFinished: true,
   },
 

@@ -50,7 +50,7 @@ function ProjectDetailsPage() {
     {
       variation: "red",
       icon: Youtube,
-      text: "Project On YouTube",
+      text: "View On YouTube",
       url: project?.youtubeLink,
     },
     {

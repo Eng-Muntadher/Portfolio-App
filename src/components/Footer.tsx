@@ -9,12 +9,12 @@ const socialLinks = [
   },
   {
     Icon: Linkedin,
-    href: "https://www.linkedin.com/in/montadar-ahmed-4577b6333",
+    href: "https://www.linkedin.com/in/muntadher-ahmed-4577b6333",
     label: "Visit my LinkedIn",
   },
   {
     Icon: Youtube,
-    href: "https://youtube.com",
+    href: "https://youtube.com/@montadherahmed340?si=SybgxoJNMJfN0STR",
     label: "Vist my YouTube chanel",
   },
   {
@@ -30,8 +30,8 @@ const quickLinks = [
     { to: "/skills", label: "Skills" },
   ],
   [
-    { to: "/project-details/1", label: "MA Vault" },
     { to: "/projects", label: "Projects" },
+    { to: "/project-details/1", label: "MA Vault" },
   ],
   [
     { to: "/contact", label: "Contact" },

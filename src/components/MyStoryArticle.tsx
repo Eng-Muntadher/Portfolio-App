@@ -13,9 +13,8 @@ function MyStoryArticle() {
       <h2 className="text-3xl text-(--orange-text) mb-6">My Story</h2>
 
       <p className={paragraphsClasses}>
-        I'm Muntadher Ahmed, a final-year Computer Engineering student and
-        front-end developer passionate about building clean, modern, and
-        user-focused web applications.
+        I'm Muntadher Ahmed, a Computer Engineer and a web developer passionate
+        about building clean, modern, and user-focused web applications.
       </p>
 
       <p className={paragraphsClasses}>

@@ -15,17 +15,17 @@ const contactInfo = [
 const links = [
   {
     icon: Github,
-    url: "https://github/eng-muntadher",
+    url: "https://github.com/eng-muntadher",
     label: "Visit my GitHub",
   },
   {
     icon: Linkedin,
-    url: "https://www.linkedin.com/in/montadar-ahmed-4577b6333",
+    url: "https://www.linkedin.com/in/muntadher-ahmed-4577b6333",
     label: "Visit my Linkedin",
   },
   {
     icon: Youtube,
-    url: "https://youtube.com",
+    url: "https://youtube.com/@montadherahmed340?si=SybgxoJNMJfN0STR",
     label: "Visit my YouTube channel",
   },
 ];
