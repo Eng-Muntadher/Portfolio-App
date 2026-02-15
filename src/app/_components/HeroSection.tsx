@@ -96,6 +96,7 @@ function HeroSection() {
         <div className="w-110 h-110 rounded-full overflow-hidden border-4 border-(--orange-text) max-[525px]:w-94 max-[525px]:h-94 max-[435px]:w-70 max-[435px]:h-70">
           <Image
             src={myImage}
+            priority={true}
             alt="An Image of Muntadher Ahmed"
             className="w-full h-full object-cover"
           />
