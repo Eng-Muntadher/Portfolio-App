@@ -1,4 +1,5 @@
 import type { LucideIcon } from "lucide-react";
+import { StaticImageData } from "next/image";
 
 export interface Project {
   id: number;
@@ -9,7 +10,7 @@ export interface Project {
   keyFeatures: string[];
   Challenges: string;
   outcome: string;
-  imageUrl: string;
+  imageUrl: string | StaticImageData;
   liveLink?: string;
   gitHubLink?: string;
   youtubeLink?: string;
