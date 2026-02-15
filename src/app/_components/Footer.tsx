@@ -31,7 +31,7 @@ const quickLinks = [
   ],
   [
     { to: "/projects", label: "Projects" },
-    { to: "/project-details/1", label: "MA Vault" },
+    { to: "/project-details/ma-vault", label: "MA Vault" },
   ],
   [
     { to: "/contact", label: "Contact" },

@@ -2,29 +2,28 @@
 
 import { motion } from "framer-motion";
 import { Clock, Github, Upload, Youtube } from "lucide-react";
-import { useRouter } from "next/navigation";
-import Image, { StaticImageData } from "next/image";
-import toast from "react-hot-toast";
-
 import Button from "./Button";
 import Skill from "./Skill";
+import toast from "react-hot-toast";
+import Image from "next/image";
+import { useRouter } from "next/navigation";
 
 interface ProjectCardProps {
+  slug: number;
   title: string;
-  slug: string;
   description: string;
   technologiesUsed: string[];
-  imageUrl: string | StaticImageData;
-  liveLink?: string;
-  gitHubLink?: string;
-  youtubeLink?: string;
+  imageUrl: string;
+  liveLink: string | undefined;
+  gitHubLink: string | undefined;
+  youtubeLink: string | undefined;
   isFinished: boolean;
   index: number;
 }
 
-export default function ProjectCard({
-  title,
+function ProjectCard({
   slug,
+  title,
   description,
   imageUrl,
   liveLink,
@@ -34,17 +33,17 @@ export default function ProjectCard({
   isFinished,
   index,
 }: ProjectCardProps) {
-  const router = useRouter();
-
   const buttonsData = [
     { link: liveLink, variation: "orange", text: "Live", icon: Upload },
     { link: gitHubLink, variation: "gray", text: "Code", icon: Github },
     { link: youtubeLink, variation: "gray", text: "Video", icon: Youtube },
   ];
 
-  const hiddenTechCount = Math.max(technologiesUsed.length - 3, 0);
+  // Calculate how many technologies used are there (other than the first 3 that are shown)
+  const notDisplayedTechnologies = technologiesUsed.length - 3;
+  const router = useRouter();
 
-  function handleCardClick() {
+  function handleClick() {
     if (!isFinished) {
       toast.dismiss();
       toast.error("This project is not finished yet. Please check back later.");
@@ -60,31 +59,41 @@ export default function ProjectCard({
       animate={{
         opacity: 1,
         y: 0,
-        transition: { duration: 0.6, delay: index * 0.2 },
+        transition: {
+          duration: 0.6,
+          delay: 0.2 * index,
+        },
       }}
     >
       <motion.div
+        whileHover={{
+          y: -10,
+          transition: { duration: 0.4, ease: "easeOut" },
+        }}
+        onClick={handleClick}
         role="button"
         tabIndex={0}
-        onClick={handleCardClick}
         onKeyDown={(e) => {
-          if (e.key === "Enter" || e.key === " ") handleCardClick();
+          if (e.key === "Enter" || e.key === " ") {
+            handleClick();
+          }
         }}
-        whileHover={{ y: -10, transition: { duration: 0.4 } }}
-        className="group h-full cursor-pointer overflow-hidden rounded-2xl border border-(--border-color) bg-(--custom-bg-2) shadow-xl focus:outline-none focus:border-(--orange-text) delay"
+        className="rounded-2xl border border-(--border-color) bg-(--custom-bg-2) shadow-xl hover:border-(--orange-text) cursor-pointer focus:outline-none focus:border-(--orange-text) delay group overflow-hidden h-full flex flex-col"
       >
-        {/* Image */}
-        <div className="relative h-56 overflow-hidden">
+        {/* Project image */}
+        <div className="relative overflow-hidden">
           <Image
             src={imageUrl}
             alt={`Preview of project: ${title}`}
-            fill
-            className="object-cover transition-transform duration-500 group-hover:scale-110"
+            className="object-cover w-full h-56 rounded-t-2xl transition-transform duration-500 group-hover:scale-110"
           />
+          {/* Overlay on image when hovering */}
+          <div className="absolute inset-0 group-hover:bg-black/30 delay z-20 rounded-t-2xl"></div>
 
+          {/* Overlay on image if it's an unfinished project */}
           {!isFinished && (
-            <div className="absolute inset-0 z-20 flex items-center justify-center bg-black/45">
-              <div className="flex items-center gap-2 rounded-lg bg-orange-500 px-5 py-3 text-white shadow-lg">
+            <div className="absolute inset-0 bg-black/45 flex items-center justify-center z-20 rounded-t-2xl">
+              <div className="flex items-center gap-2 text-base px-5 py-3 rounded-lg text-white bg-orange-500 shadow-lg">
                 <Clock size={20} />
                 Coming Soon
               </div>
@@ -92,60 +101,71 @@ export default function ProjectCard({
           )}
         </div>
 
-        {/* Content */}
-        <div className="flex flex-1 flex-col p-6">
-          <h2 className="mb-3 text-xl text-(--text-color)">{title}</h2>
+        {/* Title */}
+        <div className="p-6 flex flex-col flex-1">
+          <h2 className="text-xl text-start text-(--text-color) mb-3">
+            {title}
+          </h2>
 
-          <p className="mb-5 line-clamp-3 text-sm text-(--gray-text)">
+          {/* Description */}
+          <p className="text-sm text-start text-(--gray-text) mb-5 line-clamp-3">
             {description}
           </p>
 
           <div className="mt-auto">
-            {/* Technologies */}
-            <ul className="mb-4 flex flex-wrap gap-2">
+            {/* Technologies used in this project */}
+            <ul className="flex gap-2 flex-wrap mb-4">
+              {/* SHow only first 3 used technologies in the cart */}
               {technologiesUsed.slice(0, 3).map((tech) => (
                 <Skill
                   key={tech}
                   skillName={tech}
-                  isUsedInProjectCard
-                  addedClasses={!isFinished ? "opacity-65" : ""}
+                  isUsedInProjectCard={true}
+                  addedClasses={isFinished ? "" : "opacity-65"}
                 />
               ))}
 
-              {hiddenTechCount > 0 && (
-                <li className="rounded-full bg-(--gray-bg) px-3 py-1 text-xs text-(--gray-text) delay">
-                  +{hiddenTechCount}
-                </li>
-              )}
+              <li className="flex items-center justify-center text-xs px-3 py-1 bg-(--gray-bg) rounded-full text-(--gray-text)">
+                {/* Show how many other technologies are used other than what is shown */}
+                +{notDisplayedTechnologies}
+              </li>
             </ul>
 
-            {/* Actions */}
+            {/* Project action buttons */}
             {isFinished ? (
-              <div className="flex flex-wrap gap-2">
-                {buttonsData.map(
-                  (btn, i) =>
-                    btn.link && (
-                      <Button
-                        key={i}
-                        variation={btn.variation as "orange" | "gray"}
-                        addedClasses={`grow px-3 py-2 text-sm ${
-                          btn.variation === "gray" ? "border-2" : ""
-                        }`}
-                        onClick={(e) => {
-                          e.stopPropagation();
+              <div className="flex gap-2 flex-wrap">
+                {buttonsData.map((btn, i) =>
+                  btn.link !== "none" ? (
+                    <Button
+                      key={i}
+                      variation={
+                        btn.variation as "orange" | "gray" | "light" | "dark"
+                      }
+                      addedClasses={`justify-center text-sm px-3 py-2 grow ${
+                        btn.variation === "gray" ? "border-2" : ""
+                      }`}
+                      onClick={(e) => {
+                        e.stopPropagation();
+
+                        if (btn.link) {
                           window.open(btn.link, "_blank");
-                        }}
-                      >
-                        <btn.icon size={16} />
-                        {btn.text}
-                      </Button>
-                    ),
+                        } else {
+                          toast.error(
+                            "This link will be added soon. Please come back later",
+                          );
+                        }
+                      }}
+                    >
+                      <btn.icon size={16} />
+                      {btn.text}
+                    </Button>
+                  ) : null,
                 )}
               </div>
             ) : (
-              <div className="flex items-center gap-2 rounded-lg border border-(--border-color) bg-(--custom-bg-2) px-3 py-2 text-sm text-(--text-color-secondary) opacity-70">
+              <div className="justify-center text-sm px-3 py-2 w-full opacity-70 flex items-center gap-2 rounded-[0.625rem] text-(--text-color-secondary) border-(--border-color) bg-(--custom-bg-2) border-3">
                 <Clock size={16} />
-                Coming Soon
+                Comming Soon
               </div>
             )}
           </div>
@@ -154,3 +174,5 @@ export default function ProjectCard({
     </motion.li>
   );
 }
+
+export default ProjectCard;

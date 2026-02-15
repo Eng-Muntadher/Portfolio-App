@@ -2,8 +2,9 @@ import type { Project } from "@/app/_types/dataTypes";
 import maVault from "@/app/assets/mavault.png";
 import jobTracker from "@/app/assets/jobtracker.png";
 import portfolio from "@/app/assets/portfolio.png";
-import studentsHelper from "@/app/assets/studenthelper.png";
+import majorCompass from "@/app/assets/majorcompass.png";
 import studentsManager from "@/app/assets/studentsManager.png";
+import majorCompassDashboard from "@/app/assets/major-compass-dashboard.png";
 
 export const projects: Project[] = [
   {
@@ -136,15 +137,13 @@ export const projects: Project[] = [
       "My personal portfolio website highlights my technical skills, featured projects, educational background, and professional accomplishments. Built with performance, accessibility, and user experience in mind, it features smooth page transitions, responsive design, and interactive components, all built with modern web technologies.",
 
     technologiesUsed: [
-      "React",
+      "Next.js",
       "TypeScript",
       "Tailwind CSS",
       "Framer Motion",
-      "React Router",
       "React Hot Toast",
       "EmailJs",
       "Lucide Icons",
-      "React Error Boundary",
     ],
 
     keyFeatures: [
@@ -220,41 +219,85 @@ export const projects: Project[] = [
     id: 5,
     title: "Major Compass",
     slug: "major-compass",
-    subTitle:
-      "A web platform to assist students in choosing the right college major based on interests and skills.",
-
+    subTitle: "AI-Powered College Major Selection Platform",
     description:
-      "This will be an AI integrated web application designed to guide students in selecting a suitable college major. It provides a user-friendly interface where students can input preferences, explore majors, and receive tailored recommendations. The project focuses on performance, accessibility, and delivering a clear, intuitive experience.",
-
+      "A comprehensive web application that helps students make informed decisions about choosing the right college major. Built specifically for Iraqi students with localized data about Iraqi universities, Major Compass combines intelligent AI-powered recommendations with an intuitive bilingual (English/Arabic) user experience to guide students through the complex process of major selection.",
     technologiesUsed: [
       "Next.js",
-      "Tailwind CSS",
       "TypeScript",
-      "React Query",
-      "Lucid Icons",
-      "Supabase",
-      "ChatGpt Api",
-      "more",
+      "Tailwind CSS",
+      "Framer Motion",
+      "Supabase SSR",
+      "PostgreSQL",
+      "OpenAI GPT-4o-mini API",
+      "Radix UI",
+      "Context API",
+      "React Hot Toast",
+      "React Markdown",
+      "Lucide Icons",
     ],
-
     keyFeatures: [
-      "Interactive questionnaire to assess student interests and skills",
-      "Tailored major recommendations based on inputs",
-      "Responsive and accessible design for all devices",
-      "Smooth animations and transitions using Framer Motion",
-      "Clean navigation and user-friendly interface",
+      "AI-powered student assessment test analyzing interests, skills, and goals",
+      "Intelligent chatbot assistant using OpenAI ChatGPT API for real-time guidance",
+      "Comprehensive major database with dynamic filtering, sorting, and search",
+      "Side-by-side major comparison tool with URL-based state persistence",
+      "User authentication via Supabase with email confirmation and Google OAuth",
+      "Full bilingual support (English/Arabic) with dynamic content fetching",
+      "Save favorite majors and personalized recommendations",
+      "Incremental Static Generation (ISR) and server-side rendering for optimal performance",
+      "Fully responsive design with smooth animations and accessibility support",
     ],
-
     Challenges:
-      "Designing an engaging experience that accurately guides students required balancing interactive UI elements with clear, concise recommendations. Ensuring responsiveness and accessibility across devices was also a key focus.",
-
+      "Building a bilingual platform with dynamic content switching required careful database schema design and efficient query optimization. Implementing URL-based filter state persistence while maintaining SEO-friendly routes needed a balance between static and dynamic rendering strategies. Integrating OpenAI API for personalized recommendations while managing API costs and response times was crucial. Handling authentication flows with Supabase SSR in Next.js App Router, especially OAuth callbacks and protected routes, required deep understanding of server components and middleware.",
     outcome:
-      "Delivered a polished, intuitive platform that helps students make informed decisions about their college majors. The website is visually appealing, accessible, and provides a seamless user experience.",
+      "Successfully launched a production-ready platform that bridges the information gap for students choosing college majors. The app delivers fast, SEO-optimized pages through strategic use of ISR and SSR, provides intelligent AI guidance through ChatGPT integration, and offers seamless bilingual experience. The platform serves Iraqi students with localized university data while remaining accessible to international users, demonstrating the power of modern web technologies in solving real-world educational challenges.",
+    imageUrl: majorCompass,
+    liveLink: "https://my-major-compass.vercel.app",
+    gitHubLink: "https://github.com/Eng-Muntadher/Major-Compass",
+    youtubeLink: "https://youtube.com/watch?v=9_FGSfCyxHw&feature=youtu.be",
+    figmaLink:
+      "https://www.figma.com/design/gm8by2LB14qytVDY1FQIbv/College-Major-App-Design?node-id=0-1&p=f&t=FKbNg65qMxZUNmAs-0",
+    isFinished: true,
+  },
 
-    imageUrl: studentsHelper,
-    liveLink: "",
-    gitHubLink: "",
-    youtubeLink: "",
+  {
+    id: 6,
+    title: "Major Compass Admin Dashboard",
+    slug: "major-compass-admin-dashboard",
+    subTitle: "Content Management System for Major Compass",
+    description:
+      "A dedicated administrative dashboard for managing the Major Compass platform's content and data. Built with React and TypeScript, this CMS allows authorized administrators to add, edit, and manage comprehensive major data across both English and Arabic languages. The dashboard features robust form validation, role-based access control, and real-time database synchronization with the main Major Compass application.",
+    technologiesUsed: [
+      "React",
+      "TypeScript",
+      "React Router",
+      "React Query (TanStack Query)",
+      "Tailwind CSS",
+      "Supabase",
+      "PostgreSQL",
+      "React Hook Form",
+      "Zod",
+      "React Hot Toast",
+      "Lucide Icons",
+    ],
+    keyFeatures: [
+      "Role-based authentication and authorization with admin-only access",
+      "Comprehensive major data entry forms with bilingual support (English/Arabic)",
+      "Advanced form validation using React Hook Form and Zod schemas",
+      "Optimistic updates and efficient caching with React Query",
+      "Real-time CRUD operations synced with Major Compass database",
+      "Data table with client-side sorting, filtering, and pagination",
+      "Image upload and management for major illustrations",
+      "Draft and publish workflow for content review",
+      "Toast notifications for user feedback using React Hot Toast",
+      "Protected routes with React Router for secure navigation",
+      "Input validation for maintaining data consistency across languages",
+    ],
+    Challenges:
+      "Implementing bilingual form validation required creating sophisticated Zod schemas that ensure data completeness in both English and Arabic while handling right-to-left (RTL) text input gracefully. Managing complex relational data for majors, universities, and categories needed careful state management with React Query's cache invalidation strategies. Building an intuitive UX for bulk data entry without overwhelming administrators with forms was challenging. Coordinating React Router's navigation with React Query's data fetching and Supabase's authentication state required thoughtful architecture to prevent race conditions and ensure secure route protection.",
+    outcome:
+      "Insha'Allah, this dashboard will streamline the content management workflow for Major Compass, enabling efficient addition and maintenance of major data across multiple Iraqi universities. React Query's intelligent caching and background refetching will provide a snappy admin experience while keeping data fresh. The combination of React Hook Form with Zod validation ensures data quality and consistency across both languages. By building with React's component-based architecture, the dashboard remains maintainable and scalable as Major Compass grows to include more universities and majors.",
+    imageUrl: majorCompassDashboard,
     isFinished: false,
   },
 ];

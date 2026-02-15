@@ -21,6 +21,7 @@ export const skillsInfo: SkillCategory[] = [
       "TypeScript",
       "React",
       "React Router",
+      "Next.js",
     ],
   },
   {
