@@ -9,7 +9,7 @@ function MyStoryArticle() {
       initial={{ opacity: 0, x: -50 }}
       animate={{ opacity: 1, x: 0 }}
       transition={{ duration: 0.6 }}
-      className="scrollbar-custom rounded-[0.875rem] border border-(--border-color) p-6 bg-(--custom-bg-2) shadow-lg lg:max-h-[470px] overflow-auto delay"
+      className="scrollbar-custom rounded-[0.875rem] border border-(--border-color) p-6 bg-(--custom-bg-2) shadow-lg lg:max-h-117.5 overflow-auto delay"
     >
       <h2 className="text-3xl text-(--orange-text) mb-6">My Story</h2>
 

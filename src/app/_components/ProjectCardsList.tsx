@@ -40,8 +40,8 @@ function ProjectCardsList() {
       {filteredProjects.map((project, index) => (
         <ProjectCard
           key={project.id}
+          slug={project.slug}
           index={index}
-          id={project.id}
           title={project.title}
           description={project.description}
           technologiesUsed={project.technologiesUsed}

@@ -10,8 +10,8 @@ import Button from "./Button";
 import Skill from "./Skill";
 
 interface ProjectCardProps {
-  id: number;
   title: string;
+  slug: string;
   description: string;
   technologiesUsed: string[];
   imageUrl: string | StaticImageData;
@@ -23,8 +23,8 @@ interface ProjectCardProps {
 }
 
 export default function ProjectCard({
-  id,
   title,
+  slug,
   description,
   imageUrl,
   liveLink,
@@ -51,7 +51,7 @@ export default function ProjectCard({
       return;
     }
 
-    router.push(`/project-details/${id}`);
+    router.push(`/project-details/${slug}`);
   }
 
   return (

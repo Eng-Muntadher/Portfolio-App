@@ -26,7 +26,7 @@ const socialLinks = [
 
 const quickLinks = [
   [
-    { to: "/", label: "Home" },
+    { to: "/home", label: "Home" },
     { to: "/skills", label: "Skills" },
   ],
   [

@@ -4,6 +4,7 @@ import { StaticImageData } from "next/image";
 export interface Project {
   id: number;
   title: string;
+  slug: string;
   subTitle: string;
   description: string;
   technologiesUsed: string[];

@@ -8,7 +8,7 @@ function NavLinks() {
   return (
     <nav className="flex justify-center items-center gap-1 py-5 z-10 max-md:hidden focus-visible">
       {links.map((link) => (
-        <Link key={link} href={link} className={linkClasses}>
+        <Link key={link} href={`/${link}`} className={linkClasses}>
           {/* Same links names, just makes the first letter capitalized */}
           {link.charAt(0).toUpperCase() + link.slice(1)}
         </Link>

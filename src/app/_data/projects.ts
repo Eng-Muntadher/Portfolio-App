@@ -9,6 +9,7 @@ export const projects: Project[] = [
   {
     id: 1,
     title: "MA Vault",
+    slug: "ma-vault",
     subTitle:
       "A personal image gallery app with authentication, social features, and optimized media performance.",
 
@@ -68,7 +69,8 @@ export const projects: Project[] = [
 
   {
     id: 2,
-    title: "Job Application Tracker",
+    title: "Job Tracker",
+    slug: "job-tracker",
     subTitle:
       "A scalable job management system with AI assistance integration, real-time charts analytics, and secure authentication.",
 
@@ -126,6 +128,7 @@ export const projects: Project[] = [
   {
     id: 3,
     title: "Portfolio Website",
+    slug: "portfolio-website",
     subTitle:
       "A modern, responsive showcase of my frontend development journey, skills, and projects.",
 
@@ -174,6 +177,7 @@ export const projects: Project[] = [
   {
     id: 4,
     title: "Student Management System",
+    slug: "student-management-system",
     subTitle:
       "A school management system with SQL-heavy data operations and a lightweight Python backend.",
 
@@ -214,7 +218,8 @@ export const projects: Project[] = [
 
   {
     id: 5,
-    title: "Undecided yet",
+    title: "Major Compass",
+    slug: "major-compass",
     subTitle:
       "A web platform to assist students in choosing the right college major based on interests and skills.",
 
