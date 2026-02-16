@@ -15,7 +15,21 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
+    <html lang="en" suppressHydrationWarning>
+      <head>
+        {/* This is do avoid layout shifts or hydration errors with theme toggling */}
+        <script
+          dangerouslySetInnerHTML={{
+            __html: `
+              try {
+                const theme = localStorage.getItem('theme') || 
+                  (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light');
+                document.documentElement.classList.toggle('dark', theme === 'dark');
+              } catch {}
+            `,
+          }}
+        />
+      </head>
       <body>
         <NavBar />
         <main className="mt-12 px-20 max-xl:px-8 max-md:px-6">{children}</main>

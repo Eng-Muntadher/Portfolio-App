@@ -7,6 +7,7 @@ interface ButtonProps {
   children: React.ReactNode;
   type?: "button" | "submit" | "reset";
   isLink?: boolean;
+  isExternal?: boolean;
   to?: string;
   disabled?: boolean;
 }
@@ -17,6 +18,7 @@ function Button({
   addedClasses = "",
   children,
   isLink = false,
+  isExternal = false,
   to = "/",
   type = "button",
   disabled = false,
@@ -38,8 +40,8 @@ function Button({
     return (
       <Link
         href={to}
-        target="_blank"
-        rel="noopener noreferrer"
+        target={isExternal ? "_blank" : "_self"}
+        rel={isExternal ? "noopener noreferrer" : undefined}
         className={`${styles} ${variations[variation]} ${addedClasses} disabled:opacity-65`}
       >
         {children}

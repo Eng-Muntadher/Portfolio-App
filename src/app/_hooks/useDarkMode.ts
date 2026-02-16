@@ -1,35 +1,27 @@
-import { useLayoutEffect, useState } from "react";
+import { useEffect, useState } from "react";
 
 export function useDarkMode() {
-  const [darkMode, setDarkMode] = useState(() => {
-    try {
-      const stored = localStorage.getItem("theme");
+  const [darkMode, setDarkMode] = useState(false);
 
-      if (stored === "dark") return true;
-      if (stored === "light") return false;
+  // On mount, check the initial theme and set it accordingly to avoid hydration issues with theme toggling
+  useEffect(() => {
+    // Sync with what the script set
+    setDarkMode(document.documentElement.classList.contains("dark"));
+  }, []);
 
-      // check for the system's default theme
-      return window.matchMedia("(prefers-color-scheme: dark)").matches;
-    } catch {
-      return false;
-    }
-  });
-
-  useLayoutEffect(() => {
-    const el = document.documentElement;
-
+  // Whenever darkMode changes, update the class on the document and localStorage
+  useEffect(() => {
     if (darkMode) {
-      el.classList.add("dark");
+      document.documentElement.classList.add("dark");
       localStorage.setItem("theme", "dark");
     } else {
-      el.classList.remove("dark");
+      document.documentElement.classList.remove("dark");
       localStorage.setItem("theme", "light");
     }
   }, [darkMode]);
 
-  function toggleDarkMode() {
-    setDarkMode((prev) => !prev);
-  }
-
-  return { darkMode, toggleDarkMode };
+  return {
+    darkMode,
+    toggleDarkMode: () => setDarkMode((prev) => !prev),
+  };
 }

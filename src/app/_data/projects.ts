@@ -9,6 +9,51 @@ import majorCompassDashboard from "@/app/assets/major-compass-dashboard.png";
 export const projects: Project[] = [
   {
     id: 1,
+    title: "Major Compass",
+    slug: "major-compass",
+    subTitle: "AI-Powered College Major Selection Platform",
+    description:
+      "A comprehensive web application that helps students make informed decisions about choosing the right college major. Built specifically for Iraqi students with localized data about Iraqi universities, Major Compass combines intelligent AI-powered recommendations with an intuitive bilingual (English/Arabic) user experience to guide students through the complex process of major selection.",
+    technologiesUsed: [
+      "Next.js",
+      "TypeScript",
+      "Tailwind CSS",
+      "Framer Motion",
+      "Supabase SSR",
+      "PostgreSQL",
+      "OpenAI GPT-4o-mini API",
+      "Radix UI",
+      "Context API",
+      "React Hot Toast",
+      "React Markdown",
+      "Lucide Icons",
+    ],
+    keyFeatures: [
+      "AI-powered student assessment test analyzing interests, skills, and goals",
+      "Intelligent chatbot assistant using OpenAI ChatGPT API for real-time guidance",
+      "Comprehensive major database with dynamic filtering, sorting, and search",
+      "Side-by-side major comparison tool with URL-based state persistence",
+      "User authentication via Supabase with email confirmation and Google OAuth",
+      "Full bilingual support (English/Arabic) with dynamic content fetching",
+      "Save favorite majors and personalized recommendations",
+      "Incremental Static Generation (ISR) and server-side rendering for optimal performance",
+      "Fully responsive design with smooth animations and accessibility support",
+    ],
+    Challenges:
+      "Building a bilingual platform with dynamic content switching required careful database schema design and efficient query optimization. Implementing URL-based filter state persistence while maintaining SEO-friendly routes needed a balance between static and dynamic rendering strategies. Integrating OpenAI API for personalized recommendations while managing API costs and response times was crucial. Handling authentication flows with Supabase SSR in Next.js App Router, especially OAuth callbacks and protected routes, required deep understanding of server components and middleware.",
+    outcome:
+      "Successfully launched a production-ready platform that bridges the information gap for students choosing college majors. The app delivers fast, SEO-optimized pages through strategic use of ISR and SSR, provides intelligent AI guidance through ChatGPT integration, and offers seamless bilingual experience. The platform serves Iraqi students with localized university data while remaining accessible to international users, demonstrating the power of modern web technologies in solving real-world educational challenges.",
+    imageUrl: majorCompass,
+    liveLink: "https://my-major-compass.vercel.app",
+    gitHubLink: "https://github.com/Eng-Muntadher/Major-Compass",
+    youtubeLink: "https://youtube.com/watch?v=9_FGSfCyxHw&feature=youtu.be",
+    figmaLink:
+      "https://www.figma.com/design/gm8by2LB14qytVDY1FQIbv/College-Major-App-Design?node-id=0-1&p=f&t=FKbNg65qMxZUNmAs-0",
+    isFinished: true,
+  },
+
+  {
+    id: 2,
     title: "MA Vault",
     slug: "ma-vault",
     subTitle:
@@ -69,7 +114,7 @@ export const projects: Project[] = [
   },
 
   {
-    id: 2,
+    id: 3,
     title: "Job Tracker",
     slug: "job-tracker",
     subTitle:
@@ -127,53 +172,6 @@ export const projects: Project[] = [
   },
 
   {
-    id: 3,
-    title: "Portfolio Website",
-    slug: "portfolio-website",
-    subTitle:
-      "A modern, responsive showcase of my frontend development journey, skills, and projects.",
-
-    description:
-      "My personal portfolio website highlights my technical skills, featured projects, educational background, and professional accomplishments. Built with performance, accessibility, and user experience in mind, it features smooth page transitions, responsive design, and interactive components, all built with modern web technologies.",
-
-    technologiesUsed: [
-      "Next.js",
-      "TypeScript",
-      "Tailwind CSS",
-      "Framer Motion",
-      "React Hot Toast",
-      "EmailJs",
-      "Lucide Icons",
-    ],
-
-    keyFeatures: [
-      "Fully responsive design optimized for all devices",
-      "Interactive project showcase with live demos and source code links",
-      "Comprehensive skills and education sections",
-      "Smooth page transitions and animations using Framer Motion",
-      "Contact form with validation and email functionality",
-      "SEO optimized with semantic HTML and meta tags",
-      "Clean and intuitive navigation",
-      "Dark mode support",
-      "Accessibility-focused code",
-    ],
-
-    Challenges:
-      "Designing a portfolio that effectively represents my journey while maintaining excellent performance and accessibility. Implementing smooth animations, responsive layouts, and email functionality without sacrificing speed was a key challenge.",
-
-    outcome:
-      "Created a polished, professional portfolio that showcases my skills, projects, and growth as a frontend developer. The website delivers a seamless experience across devices and has become a central part of my personal online brand.",
-
-    imageUrl: portfolio,
-    liveLink: "https://muntadher-ahmed.vercel.app",
-    gitHubLink: "https://github.com/Eng-Muntadher/Portfolio-App",
-    youtubeLink: "https://www.youtube.com/shorts/L7H_s2v_TY8?feature=share",
-    figmaLink:
-      "https://www.figma.com/design/1LNGOAX1BV4PI1sEHHiqBD/Portfolio-Web-App-Design?node-id=3-13162&m=dev",
-    isFinished: true,
-  },
-
-  {
     id: 4,
     title: "Student Management System",
     slug: "student-management-system",
@@ -217,46 +215,48 @@ export const projects: Project[] = [
 
   {
     id: 5,
-    title: "Major Compass",
-    slug: "major-compass",
-    subTitle: "AI-Powered College Major Selection Platform",
+    title: "Portfolio Website",
+    slug: "portfolio-website",
+    subTitle:
+      "A modern, responsive showcase of my frontend development journey, skills, and projects.",
+
     description:
-      "A comprehensive web application that helps students make informed decisions about choosing the right college major. Built specifically for Iraqi students with localized data about Iraqi universities, Major Compass combines intelligent AI-powered recommendations with an intuitive bilingual (English/Arabic) user experience to guide students through the complex process of major selection.",
+      "My personal portfolio website highlights my technical skills, featured projects, educational background, and professional accomplishments. Built with performance, accessibility, and user experience in mind, it features smooth page transitions, responsive design, and interactive components, all built with modern web technologies.",
+
     technologiesUsed: [
       "Next.js",
       "TypeScript",
       "Tailwind CSS",
       "Framer Motion",
-      "Supabase SSR",
-      "PostgreSQL",
-      "OpenAI GPT-4o-mini API",
-      "Radix UI",
-      "Context API",
       "React Hot Toast",
-      "React Markdown",
+      "EmailJs",
       "Lucide Icons",
     ],
+
     keyFeatures: [
-      "AI-powered student assessment test analyzing interests, skills, and goals",
-      "Intelligent chatbot assistant using OpenAI ChatGPT API for real-time guidance",
-      "Comprehensive major database with dynamic filtering, sorting, and search",
-      "Side-by-side major comparison tool with URL-based state persistence",
-      "User authentication via Supabase with email confirmation and Google OAuth",
-      "Full bilingual support (English/Arabic) with dynamic content fetching",
-      "Save favorite majors and personalized recommendations",
-      "Incremental Static Generation (ISR) and server-side rendering for optimal performance",
-      "Fully responsive design with smooth animations and accessibility support",
+      "Fully responsive design optimized for all devices",
+      "Interactive project showcase with live demos and source code links",
+      "Comprehensive skills and education sections",
+      "Smooth page transitions and animations using Framer Motion",
+      "Contact form with validation and email functionality",
+      "SEO optimized with semantic HTML and meta tags",
+      "Clean and intuitive navigation",
+      "Dark mode support",
+      "Accessibility-focused code",
     ],
+
     Challenges:
-      "Building a bilingual platform with dynamic content switching required careful database schema design and efficient query optimization. Implementing URL-based filter state persistence while maintaining SEO-friendly routes needed a balance between static and dynamic rendering strategies. Integrating OpenAI API for personalized recommendations while managing API costs and response times was crucial. Handling authentication flows with Supabase SSR in Next.js App Router, especially OAuth callbacks and protected routes, required deep understanding of server components and middleware.",
+      "Designing a portfolio that effectively represents my journey while maintaining excellent performance and accessibility. Implementing smooth animations, responsive layouts, and email functionality without sacrificing speed was a key challenge.",
+
     outcome:
-      "Successfully launched a production-ready platform that bridges the information gap for students choosing college majors. The app delivers fast, SEO-optimized pages through strategic use of ISR and SSR, provides intelligent AI guidance through ChatGPT integration, and offers seamless bilingual experience. The platform serves Iraqi students with localized university data while remaining accessible to international users, demonstrating the power of modern web technologies in solving real-world educational challenges.",
-    imageUrl: majorCompass,
-    liveLink: "https://my-major-compass.vercel.app",
-    gitHubLink: "https://github.com/Eng-Muntadher/Major-Compass",
-    youtubeLink: "https://youtube.com/watch?v=9_FGSfCyxHw&feature=youtu.be",
+      "Created a polished, professional portfolio that showcases my skills, projects, and growth as a frontend developer. The website delivers a seamless experience across devices and has become a central part of my personal online brand.",
+
+    imageUrl: portfolio,
+    liveLink: "https://muntadher-ahmed.vercel.app",
+    gitHubLink: "https://github.com/Eng-Muntadher/Portfolio-App",
+    youtubeLink: "https://www.youtube.com/shorts/L7H_s2v_TY8?feature=share",
     figmaLink:
-      "https://www.figma.com/design/gm8by2LB14qytVDY1FQIbv/College-Major-App-Design?node-id=0-1&p=f&t=FKbNg65qMxZUNmAs-0",
+      "https://www.figma.com/design/1LNGOAX1BV4PI1sEHHiqBD/Portfolio-Web-App-Design?node-id=3-13162&m=dev",
     isFinished: true,
   },
 

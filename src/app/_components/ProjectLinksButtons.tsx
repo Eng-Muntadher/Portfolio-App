@@ -13,6 +13,7 @@ function ProjectLinksButtons({ buttons }: ProjectLinksButtonsProps) {
             key={i}
             variation={btn.variation}
             isLink={true}
+            isExternal={true}
             to={btn.url}
             addedClasses="px-6 py-4 max-md:grow justify-center"
           >

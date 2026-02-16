@@ -5,15 +5,15 @@ import { Clock, Github, Upload, Youtube } from "lucide-react";
 import Button from "./Button";
 import Skill from "./Skill";
 import toast from "react-hot-toast";
-import Image from "next/image";
+import Image, { StaticImageData } from "next/image";
 import { useRouter } from "next/navigation";
 
 interface ProjectCardProps {
-  slug: number;
+  slug: string;
   title: string;
   description: string;
   technologiesUsed: string[];
-  imageUrl: string;
+  imageUrl: string | StaticImageData;
   liveLink: string | undefined;
   gitHubLink: string | undefined;
   youtubeLink: string | undefined;
@@ -84,6 +84,7 @@ function ProjectCard({
         <div className="relative overflow-hidden">
           <Image
             src={imageUrl}
+            priority={index < 3} // Prioritize loading for the first 3 images for better performance
             alt={`Preview of project: ${title}`}
             className="object-cover w-full h-56 rounded-t-2xl transition-transform duration-500 group-hover:scale-110"
           />

@@ -59,6 +59,7 @@ function HeroSection() {
             className="flex gap-4 flex-wrap"
           >
             <Button
+              to="/projects"
               isLink={true}
               variation="orange"
               addedClasses="px-6 py-3 max-[390px]:grow max-[390px]:justify-center"
@@ -68,6 +69,7 @@ function HeroSection() {
             </Button>
 
             <Button
+              to="/contact"
               isLink={true}
               variation="light"
               addedClasses="px-6 py-3 max-[390px]:grow max-[390px]:justify-center"

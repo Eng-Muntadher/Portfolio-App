@@ -1,4 +1,4 @@
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import {
   Home,
@@ -55,14 +55,19 @@ const menuItems: MenuItem[] = [
   },
 ];
 
-const currentYear = new Date().getFullYear();
-
 function MobileNavMenu({
   open,
   setIsOpen,
   isDarkMode,
   toggleTheme,
 }: MobileNavMenuProps) {
+  const [mounted, setMounted] = useState(false);
+
+  // Ensure component is mounted before rendering to avoid hydration issues because of document access
+  useEffect(() => {
+    setMounted(true);
+  }, []);
+
   // Close if Escape key is pressed
   useEffect(() => {
     if (!open) return;
@@ -85,6 +90,9 @@ function MobileNavMenu({
     // Delay closing to allow navigation animation
     setTimeout(() => setIsOpen(false), 150);
   }
+
+  // Don't render anything until we're sure we're on the client to avoid hydration mismatch due to document access
+  if (!mounted) return null;
 
   return createPortal(
     <AnimatePresence>
@@ -181,7 +189,7 @@ function MobileNavMenu({
             {/* Footer - Optional branding */}
             <div className="absolute bottom-0 left-0 right-0 p-6 border-t border-(--border-color)">
               <p className="text-center text-sm text-(--text-color) opacity-50">
-                © {currentYear} Muntadher Ahmed
+                © 2026 Muntadher Ahmed
               </p>
             </div>
           </motion.div>
