@@ -59,12 +59,15 @@ function ContactForm() {
       onSubmit={handleSubmit}
       className="space-y-6 p-6 rounded-xl border border-(--border-color) bg-(--custom-bg) shadow-lg h-fit delay"
     >
+      {/* Heading */}
       <h2 className="text-3xl text-(--text-color) mb-6">
         <span>Send a </span>
         <span className="text-(--orange-text)">Message</span>
       </h2>
 
+      {/* Inputs */}
       <div className="space-y-6">
+        {/* Name */}
         <label
           htmlFor="name"
           className="block text-(--text-color-secondary) mb-2"
@@ -85,6 +88,7 @@ function ContactForm() {
           addedClasses="w-full"
         />
 
+        {/* Email */}
         <label
           htmlFor="email"
           className="block text-(--text-color-secondary) mb-2"
@@ -105,6 +109,7 @@ function ContactForm() {
           addedClasses="w-full"
         />
 
+        {/* Message */}
         <label
           htmlFor="message"
           className="block text-(--text-color-secondary) mb-2"

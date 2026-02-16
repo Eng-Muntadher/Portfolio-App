@@ -13,7 +13,7 @@ export const projects: Project[] = [
     slug: "major-compass",
     subTitle: "AI-Powered College Major Selection Platform",
     description:
-      "A comprehensive web application that helps students make informed decisions about choosing the right college major. Built specifically for Iraqi students with localized data about Iraqi universities, Major Compass combines intelligent AI-powered recommendations with an intuitive bilingual (English/Arabic) user experience to guide students through the complex process of major selection.",
+      "A comprehensive web application that helps students make informed decisions about choosing the right college major. Built for Iraqi students in mind with localized data about Iraqi universities but can be used by anyone, Major Compass combines AI-powered recommendations and chatbot with an intuitive bilingual (English/Arabic) user experience to guide students through the complex process of major selection.",
     technologiesUsed: [
       "Next.js",
       "TypeScript",
@@ -29,18 +29,19 @@ export const projects: Project[] = [
       "Lucide Icons",
     ],
     keyFeatures: [
-      "AI-powered student assessment test analyzing interests, skills, and goals",
-      "Intelligent chatbot assistant using OpenAI ChatGPT API for real-time guidance",
-      "Comprehensive major database with dynamic filtering, sorting, and search",
+      "AI-powered student assessment test with smart recommendations",
+      "Intelligent chatbot assistant using OpenAI ChatGPT API",
+      "Detailed major database with dynamic filtering, sorting, and search",
       "Side-by-side major comparison tool with URL-based state persistence",
-      "User authentication via Supabase with email confirmation and Google OAuth",
+      "Authentication, authorization, email confirmation and Google OAuth",
       "Full bilingual support (English/Arabic) with dynamic content fetching",
       "Save favorite majors and personalized recommendations",
-      "Incremental Static Generation (ISR) and server-side rendering for optimal performance",
-      "Fully responsive design with smooth animations and accessibility support",
+      "ISR, SSR and optimized data fetching for optimal performance",
+      "Fully responsive design with smooth animations and accessibility",
+      "Editable user Profiles with saved majors and smart suggestions",
     ],
     Challenges:
-      "Building a bilingual platform with dynamic content switching required careful database schema design and efficient query optimization. Implementing URL-based filter state persistence while maintaining SEO-friendly routes needed a balance between static and dynamic rendering strategies. Integrating OpenAI API for personalized recommendations while managing API costs and response times was crucial. Handling authentication flows with Supabase SSR in Next.js App Router, especially OAuth callbacks and protected routes, required deep understanding of server components and middleware.",
+      "Building a bilingual platform with dynamic content switching required careful database schema design, hard layout managment and efficient query optimization. Implementing URL-based filter state persistence while maintaining SEO-friendly routes needed a balance between static and dynamic rendering strategies. Integrating OpenAI API for personalized recommendations while managing API costs and response times was crucial. Handling authentication flows with Supabase SSR in Next.js App Router, especially OAuth callbacks and protected routes, required deep understanding of server components and middleware.",
     outcome:
       "Successfully launched a production-ready platform that bridges the information gap for students choosing college majors. The app delivers fast, SEO-optimized pages through strategic use of ISR and SSR, provides intelligent AI guidance through ChatGPT integration, and offers seamless bilingual experience. The platform serves Iraqi students with localized university data while remaining accessible to international users, demonstrating the power of modern web technologies in solving real-world educational challenges.",
     imageUrl: majorCompass,
@@ -60,7 +61,7 @@ export const projects: Project[] = [
       "A personal image gallery app with authentication, social features, and optimized media performance.",
 
     description:
-      "MA Vault is a full-featured image gallery platform built with a focus on performance, accessibility, and a smooth user experience. It includes secure Supabase authentication with email confirmation, optimized image handling with WebP and HEIC format conversion, and a responsive interface enhanced by Framer Motion animations. This is a personal project where I showcase my own images and allow users to upload theirs. Built to merge my photography and web development passions.",
+      "MA Vault is a full-featured image gallery platform built with a focus on performance and accessibility. It includes secure Supabase authentication with email confirmation, optimized image handling with WebP and HEIC format conversion, and a responsive interface enhanced by Framer Motion animations. This is a personal project where I showcase my own images and allow users to upload theirs. Built to merge my photography and web development passions.",
 
     technologiesUsed: [
       "React",
@@ -140,10 +141,10 @@ export const projects: Project[] = [
     ],
 
     keyFeatures: [
-      "Full authentication & authorization with Supabase",
+      "Full authentication & authorization with email confirmation",
       "CRUD operations for job applications",
       "Real-time Pie and Line charts using Recharts",
-      "OpenAI-powered assistant for intelligent task support",
+      "OpenAI-powered chatbot for intelligent task support",
       "Advanced search, sorting, and filtering",
       "Clean global state management with Redux Toolkit",
       "Advanced data caching with React Query",
@@ -157,7 +158,7 @@ export const projects: Project[] = [
     ],
 
     Challenges:
-      "Ensuring smooth chart animations while handling real-time data required careful performance optimizations. Integrating an AI assistant and building a scalable state management structure also introduced architectural challenges.",
+      "Ensuring smooth chart animations while handling real-time data required careful performance optimizations. Integrating an AI assistant and building a scalable state management structure also introduced architectural challenges. carefully designing the database schema and API routes to support complex queries for analytics and filtering was crucial.",
 
     outcome:
       "Created a powerful full stack and user-friendly platform that simplifies job tracking and enhances productivity. The app delivers fast performance, clear analytics, and an AI-enhanced workflow that provides real value to users.",
@@ -176,10 +177,10 @@ export const projects: Project[] = [
     title: "Student Management System",
     slug: "student-management-system",
     subTitle:
-      "A school management system with SQL-heavy data operations and a lightweight Python backend.",
+      "A school management system with SQL-heavy data operations and a Python backend.",
 
     description:
-      "A web-based student management system designed to help schools track students, classes, and academic performance. The application relies heavily on SQL queries for data retrieval and manipulation, combined with a lightweight Python backend and a vanilla JavaScript frontend to deliver a practical and efficient solution.",
+      "A web-based student management system designed to help schools track students, classes, and academic performance. The application relies heavily on SQL queries for data retrieval and manipulation, combined with a Python backend and a vanilla JavaScript frontend to deliver a practical and efficient solution.",
 
     technologiesUsed: [
       "HTML",
@@ -192,12 +193,13 @@ export const projects: Project[] = [
 
     keyFeatures: [
       "Student records management with full CRUD operations",
+      "Optimistic UI updates with vanilla JavaScript",
       "Advanced SQL queries for tracking grades, classes, and performance",
       "Relational database design for students, classes, and tests",
       "Lightweight Python backend for database communication",
       "Dynamic UI updates using vanilla JavaScript",
       "Data consistency handling between related entities via SQL joins",
-      "Theme toggle support",
+      "Theme & animation toggle support",
     ],
 
     Challenges:
@@ -218,7 +220,7 @@ export const projects: Project[] = [
     title: "Portfolio Website",
     slug: "portfolio-website",
     subTitle:
-      "A modern, responsive showcase of my frontend development journey, skills, and projects.",
+      "A modern, responsive showcase of my web development journey, skills, and projects.",
 
     description:
       "My personal portfolio website highlights my technical skills, featured projects, educational background, and professional accomplishments. Built with performance, accessibility, and user experience in mind, it features smooth page transitions, responsive design, and interactive components, all built with modern web technologies.",
@@ -240,14 +242,14 @@ export const projects: Project[] = [
       "Smooth page transitions and animations using Framer Motion",
       "Contact form with validation and email functionality",
       "SEO optimized with semantic HTML and meta tags",
+      "SSR with Next.js for fast FCP",
       "Clean and intuitive navigation",
       "Dark mode support",
       "Accessibility-focused code",
     ],
 
     Challenges:
-      "Designing a portfolio that effectively represents my journey while maintaining excellent performance and accessibility. Implementing smooth animations, responsive layouts, and email functionality without sacrificing speed was a key challenge.",
-
+      "Designing a portfolio that effectively represents my journey while maintaining strong performance and accessibility was a challenge. Since the original project was built with React, upgrading to Next.js required a deep understanding of both technologies.",
     outcome:
       "Created a polished, professional portfolio that showcases my skills, projects, and growth as a frontend developer. The website delivers a seamless experience across devices and has become a central part of my personal online brand.",
 

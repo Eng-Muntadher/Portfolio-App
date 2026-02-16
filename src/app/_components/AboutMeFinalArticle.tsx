@@ -17,10 +17,10 @@ function AboutMeFinalArticle() {
 
       <p className="text-(--text-color-secondary) text-lg max-w-188">
         I’m constantly exploring new technologies and improving my skills. I’m
-        currently diving deeper into advanced React patterns, Next.js,
-        shadcn/ui, advanced Git workflows, and more. My goal is to become a
-        well-rounded developer who can tackle any challenge with confidence and
-        creativity.
+        currently diving deeper into advanced React patterns, testing with jest
+        & RTL, shadcn/ui, advanced Git workflows, and more. My goal is to become
+        a well-rounded developer who can tackle any challenge with confidence
+        and creativity.
       </p>
     </AnimationWrapper>
   );

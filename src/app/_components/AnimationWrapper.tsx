@@ -1,24 +1,24 @@
 "use client";
 
+/* since framer motion doesn't support server components,
+    we need to create a client component wrapper for it
+    This component accepts an "as" prop to specify which HTML
+    element to render, and passes all other props to the motion component
+ */
+
 import { motion, HTMLMotionProps } from "framer-motion";
 
-// Extract only HTML element tags from motion
-type HTMLMotionTag = Extract<
-  keyof typeof motion,
-  keyof React.JSX.IntrinsicElements
->;
+type AnimationWrapperProps = HTMLMotionProps<"div"> & {
+  as?: keyof typeof motion;
+  children?: React.ReactNode;
+};
 
-type AnimationWrapperProps<T extends HTMLMotionTag = "div"> =
-  HTMLMotionProps<T> & {
-    as?: T;
-  };
-
-export default function AnimationWrapper<T extends HTMLMotionTag = "div">({
-  as,
+export default function AnimationWrapper({
+  as = "div",
   children,
   ...props
-}: AnimationWrapperProps<T>) {
-  const Component = motion[as || "div"] as any;
+}: AnimationWrapperProps) {
+  const Component = motion[as] as any;
 
   return <Component {...props}>{children}</Component>;
 }

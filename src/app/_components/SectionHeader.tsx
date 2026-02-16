@@ -1,3 +1,7 @@
+/* This component is responsible for rendering
+    section headers with an optional paragraph below it.
+    It also includes animation when the section comes into view.*/
+
 import AnimationWrapper from "./AnimationWrapper";
 
 interface SectionTitleProps {

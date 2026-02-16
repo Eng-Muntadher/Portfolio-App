@@ -46,8 +46,8 @@ function HeroSection() {
 
             <p className="text-xl text-(--text-color-secondary) mb-8 max-w-154">
               I build beautiful, responsive web applications using modern
-              technologies like React and TypeScript, focusing on clean,
-              maintainable code and seamless user experiences.
+              technologies like Next.js, React and TypeScript, focusing on
+              clean, maintainable and accessible code.
             </p>
           </AnimationWrapper>
 

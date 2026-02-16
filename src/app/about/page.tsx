@@ -4,6 +4,7 @@ import AboutMeCardsList from "@/app/_components/AboutMeCardsList";
 import AboutMeFinalArticle from "@/app/_components/AboutMeFinalArticle";
 import { Metadata } from "next";
 
+// Metadata for the About page
 export const metadata: Metadata = {
   title: "About",
 };

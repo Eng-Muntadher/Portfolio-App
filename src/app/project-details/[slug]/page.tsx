@@ -1,4 +1,5 @@
 import { projects } from "@/app/_data/projects";
+import { Metadata } from "next";
 import { ProjectButtonsDataType } from "@/app/_types/dataTypes";
 import AnimationWrapper from "@/app/_components/AnimationWrapper";
 import Image from "next/image";
@@ -17,8 +18,7 @@ import {
   Youtube,
 } from "lucide-react";
 
-import { Metadata } from "next";
-
+// Metadata for the Projects page
 export const metadata: Metadata = {
   title: "Projects",
 };
@@ -102,6 +102,7 @@ async function ProjectDetailsPage({ params }: PageProps) {
         {/* Project image */}
         <div className="mb-12">
           <Image
+            priority={true}
             src={project?.imageUrl}
             alt={`Image for the project ${project?.title}`}
             className="rounded-xl w-full h-auto md:h-168 md:object-cover md:object-center"

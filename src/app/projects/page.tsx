@@ -2,7 +2,9 @@ import SectionHeader from "@/app/_components/SectionHeader";
 import ProjectsFilterButtons from "@/app/_components/ProjectsFilterButtons";
 import ProjectCardsList from "@/app/_components/ProjectCardsList";
 import { Metadata } from "next";
+import { Suspense } from "react";
 
+// Metadata for the Projects page
 export const metadata: Metadata = {
   title: "Projects",
 };
@@ -17,9 +19,13 @@ function ProjectsPage() {
         addedClasses="text-6xl mb-10 max-lg:text-5xl max-md:text-4xl"
       />
 
-      <ProjectsFilterButtons />
+      <Suspense>
+        <ProjectsFilterButtons />
+      </Suspense>
 
-      <ProjectCardsList />
+      <Suspense>
+        <ProjectCardsList />
+      </Suspense>
     </div>
   );
 }

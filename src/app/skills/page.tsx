@@ -5,6 +5,7 @@ import TechnicalNotes from "@/app/_components/TechnicalNotes";
 import SectionHeader from "@/app/_components/SectionHeader";
 import { Metadata } from "next";
 
+// Metadata for the Skills page
 export const metadata: Metadata = {
   title: "Skills",
 };

@@ -3,6 +3,7 @@ import ContactInfo from "@/app/_components/ContactInfo";
 import ContactForm from "@/app/_components/ContactForm";
 import { Metadata } from "next";
 
+// Metadata for the Contact page
 export const metadata: Metadata = {
   title: "Contact",
 };
