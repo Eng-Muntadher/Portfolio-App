@@ -3,6 +3,11 @@ import { coreStrengths, currentlyExploring } from "@/app/_data/skills";
 import SkillCardsContainer from "@/app/_components/SkillCardsContainer";
 import TechnicalNotes from "@/app/_components/TechnicalNotes";
 import SectionHeader from "@/app/_components/SectionHeader";
+import { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "Skills",
+};
 
 function SkillsPage() {
   return (

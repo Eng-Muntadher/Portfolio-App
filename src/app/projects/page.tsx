@@ -1,6 +1,11 @@
 import SectionHeader from "@/app/_components/SectionHeader";
 import ProjectsFilterButtons from "@/app/_components/ProjectsFilterButtons";
 import ProjectCardsList from "@/app/_components/ProjectCardsList";
+import { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "Projects",
+};
 
 function ProjectsPage() {
   return (

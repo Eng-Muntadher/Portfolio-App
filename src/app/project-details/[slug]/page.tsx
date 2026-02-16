@@ -17,6 +17,12 @@ import {
   Youtube,
 } from "lucide-react";
 
+import { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "Projects",
+};
+
 // Generate static paths for all projects based on their slugs
 export async function generateStaticParams() {
   return projects.map((project) => ({

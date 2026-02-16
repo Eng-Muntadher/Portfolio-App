@@ -2,6 +2,11 @@ import SectionHeader from "@/app/_components/SectionHeader";
 import MyStoryArticle from "@/app/_components/MyStoryArticle";
 import AboutMeCardsList from "@/app/_components/AboutMeCardsList";
 import AboutMeFinalArticle from "@/app/_components/AboutMeFinalArticle";
+import { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "About",
+};
 
 function AboutPage() {
   return (

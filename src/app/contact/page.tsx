@@ -1,6 +1,11 @@
 import SectionHeader from "@/app/_components/SectionHeader";
 import ContactInfo from "@/app/_components/ContactInfo";
 import ContactForm from "@/app/_components/ContactForm";
+import { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "Contact",
+};
 
 function ContactPage() {
   return (

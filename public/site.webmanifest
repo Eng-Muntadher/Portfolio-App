@@ -1,0 +1,17 @@
+{
+  "name": "Muntadher Ahmed Portfolio",
+  "short_name": "MA Portfolio",
+  "description": "Front-end developer portfolio showcasing React and TypeScript projects",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#ffffff",
+  "theme_color": "#ff6900",
+  "icons": [
+    {
+      "src": "/favicon.svg",
+      "sizes": "any",
+      "type": "image/svg+xml",
+      "purpose": "any maskable"
+    }
+  ]
+}
