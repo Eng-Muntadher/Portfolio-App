@@ -18,6 +18,7 @@ function ContactForm() {
     e.preventDefault();
 
     if (!name.trim() || !email.trim() || !message.trim()) {
+      toast.dismiss();
       toast.error("Please Fill All Required Forms!");
       return;
     }

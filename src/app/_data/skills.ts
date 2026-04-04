@@ -34,6 +34,7 @@ export const skillsInfo: SkillCategory[] = [
       "CSS Modules",
       "Styled Components",
       "Framer Motion",
+      "Radix UI",
     ],
   },
   {
@@ -48,6 +49,7 @@ export const skillsInfo: SkillCategory[] = [
       "Supabase",
       "SQL",
       "REST APIs",
+      "OpenAI API",
     ],
   },
   {
@@ -60,12 +62,6 @@ export const skillsInfo: SkillCategory[] = [
       "Git & GitHub",
       "Vite",
       "Vercel",
-      "ESLint",
-      "Prettier",
-      "npm",
-      "Chrome DevTools",
-      "Redux DevTools",
-      "React Query DevTools",
     ],
   },
   {
@@ -79,9 +75,9 @@ export const skillsInfo: SkillCategory[] = [
       "React Hot Toast",
       "Day.js",
       "React Dropzone",
+      "Heic2any",
+      "React Markdown",
       "React Error Boundary",
-      "React Icons",
-      "Lucid Icons",
     ],
   },
   {
@@ -90,7 +86,6 @@ export const skillsInfo: SkillCategory[] = [
     iconBgColor: "#FFB6B920",
     category: "Best Practices",
     skills: [
-      "Clean Code",
       "Performance Optimization",
       "Web Accessibility (a11y)",
       "SEO Best Practices",

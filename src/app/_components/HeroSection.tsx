@@ -1,8 +1,11 @@
-import { ArrowRight, Download } from "lucide-react";
+import { ArrowRight, Download, ExternalLink } from "lucide-react";
 import Image from "next/image";
 import myImage from "../assets/myImage.jpg";
 import Button from "./Button";
 import AnimationWrapper from "./AnimationWrapper";
+
+const cvLinkClasses =
+  "flex items-center gap-2 px-6 py-3 rounded-[0.625rem] cursor-pointer transition-all duration-300 focus:outline-none focus-visible:ring-2 focus-visible:ring-(--orange-text) text-white bg-(--dark-btn-bg) hover:bg-gray-700 hover:scale-102 max-[393px]:grow max-[390px]:justify-center";
 
 function HeroSection() {
   return (
@@ -79,8 +82,18 @@ function HeroSection() {
 
             <a
               href="/cv.pdf"
+              target="_blank"
+              rel="noopener noreferrer"
+              className={cvLinkClasses}
+            >
+              <ExternalLink aria-hidden="true" />
+              View CV
+            </a>
+
+            <a
+              href="/cv.pdf"
               download="Muntadher-Ahmed-CV.pdf"
-              className="flex items-center gap-2 px-6 py-3 rounded-[0.625rem] cursor-pointer transition-all duration-300  focus:outline-none focus-visible:ring-2 focus-visible:ring-(--orange-text) text-white bg-(--dark-btn-bg) hover:bg-gray-700 hover:scale-102 max-[390px]:grow max-[390px]:justify-center"
+              className={cvLinkClasses}
             >
               <Download aria-hidden="true" />
               Download CV
