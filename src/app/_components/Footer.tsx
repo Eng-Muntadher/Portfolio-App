@@ -27,11 +27,11 @@ const socialLinks = [
 const quickLinks = [
   [
     { to: "/home", label: "Home" },
-    { to: "/skills", label: "Skills" },
+    { to: "/experience", label: "Experience" },
   ],
   [
     { to: "/projects", label: "Projects" },
-    { to: "/project-details/ma-vault", label: "MA Vault" },
+    { to: "/skills", label: "Skills" },
   ],
   [
     { to: "/contact", label: "Contact" },

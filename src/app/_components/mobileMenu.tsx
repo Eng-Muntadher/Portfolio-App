@@ -39,6 +39,11 @@ const menuItems: MenuItem[] = [
     to: "/about",
   },
   {
+    label: "Experience",
+    icon: <Briefcase className="w-5 h-5" />,
+    to: "/experience",
+  },
+  {
     label: "Projects",
     icon: <Briefcase className="w-5 h-5" />,
     to: "/projects",

@@ -3,7 +3,7 @@
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 
-const links = ["home", "about", "skills", "projects", "contact"];
+const links = ["home", "about", "experience", "skills", "projects", "contact"];
 const linkClasses =
   "px-4 py-2 text-(--nav-links-text) hover:text-(--orange-text) focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-(--orange-text)";
 

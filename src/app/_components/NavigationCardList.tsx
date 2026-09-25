@@ -1,7 +1,15 @@
-import { Briefcase, Code, Mail } from "lucide-react";
+import { Briefcase, Code, Mail, History } from "lucide-react";
 import NavigationCardItem from "./NavigationCardItem";
 
 const cardData = [
+  {
+    heading: "My Experience",
+    text: "See my professional journey",
+    icon: History,
+    iconBg: "rgba(255, 105, 0, 0.20)",
+    iconTextColor: "var(--orange-text)",
+    url: "/experience",
+  },
   {
     heading: "View My Work",
     text: "Explore my portfolio projects",
